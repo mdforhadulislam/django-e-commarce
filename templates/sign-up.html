@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <link rel="preconnect" href="https://fonts.googleapis.com" />
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+   <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet" />
+
+   <title>Sign Up</title>
+   <link rel="stylesheet" href="../dist/style.css" />
+   <link rel="stylesheet" href="../dist/main.css" />
+</head>
+
+<body>
+
+
+
+   <div class="relative min-h-screen flex ">
+      <div
+         class="flex flex-col sm:flex-row items-center md:items-start sm:justify-center md:justify-start flex-auto min-w-0 bg-white">
+         <div
+            class="sm:w-1/2 xl:w-3/5 h-full hidden md:flex flex-auto items-center justify-center p-10 overflow-hidden bg-purple-900 text-white bg-no-repeat bg-cover relative"
+            style="background-image: url(https://images.unsplash.com/photo-1579451861283-a2239070aaa9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80);">
+            <div class="absolute bg-gradient-to-b from-indigo-600 to-blue-500 opacity-75 inset-0 z-0"></div>
+            <div class="w-full  max-w-md z-10">
+               <div class="sm:text-4xl xl:text-5xl font-bold leading-tight mb-6">Reference site about Lorem Ipsum..
+               </div>
+               <div class="sm:text-sm xl:text-md text-gray-200 font-normal"> What is Lorem Ipsum Lorem Ipsum is simply
+                  dummy
+                  text of the printing and typesetting industry Lorem Ipsum has been the industry's standard dummy text
+                  ever
+                  since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen
+                  book it
+                  has?</div>
+            </div>
+            <!---remove custom style-->
+            <ul class="circles">
+               <li></li>
+               <li></li>
+               <li></li>
+               <li></li>
+               <li></li>
+               <li></li>
+               <li></li>
+               <li></li>
+               <li></li>
+               <li></li>
+            </ul>
+         </div>
+         <div
+            class="md:flex md:items-center md:justify-center w-full sm:w-auto md:h-full  xl:w-2/5 p-8  md:p-10 lg:p-14 sm:rounded-lg md:rounded-none bg-white">
+            <div class="max-w-md w-full space-y-8">
+               <div class="text-center">
+                  <h2 class="mt-6 text-3xl font-bold text-gray-900">
+                     REGISTER
+                  </h2>
+                  <p class="mt-2 text-sm text-gray-500">Enter your information to register</p>
+               </div>
+
+               <!-- <div class="flex items-center justify-center space-x-2">
+                  <span class="h-px w-16 bg-gray-200"></span>
+                  <span class="text-gray-300 font-normal">or continue with</span>
+                  <span class="h-px w-16 bg-gray-200"></span>
+               </div> -->
+               <form class="mt-8 space-y-6" action="#" method="POST">
+
+                  <div class="mt-8 content-center">
+                     <label class="ml-3 text-sm font-bold text-gray-700 tracking-wide">
+                        First Name
+                     </label>
+                     <input
+                        class="w-full content-center text-base px-4 py-2 border-b rounded-2xl border-gray-300 focus:outline-none focus:border-indigo-500"
+                        type="text" placeholder="Enter your First Name" value="">
+                  </div>
+
+                  <div class="mt-8 content-center">
+                     <label class="ml-3 text-sm font-bold text-gray-700 tracking-wide">
+                        Last Name
+                     </label>
+                     <input
+                        class="w-full content-center text-base px-4 py-2 border-b rounded-2xl border-gray-300 focus:outline-none focus:border-indigo-500"
+                        type="text" placeholder="Enter your  Last Name" value="">
+                  </div>
+
+                  <input type="hidden" name="remember" value="true">
+                  <div class="relative">
+                     <div class="absolute right-3 mt-4"><svg xmlns="http://www.w3.org/2000/svg"
+                           class="h-6 w-6 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                     </div>
+                     <label class="ml-3 text-sm font-bold text-gray-700 tracking-wide">Email</label>
+                     <input
+                        class=" w-full text-base px-4 py-2 border-b border-gray-300 focus:outline-none rounded-2xl focus:border-indigo-500"
+                        type="" placeholder="mail@gmail.com" value="">
+                  </div>
+                  <div class="mt-8 content-center">
+                     <label class="ml-3 text-sm font-bold text-gray-700 tracking-wide">
+                        Password
+                     </label>
+                     <input
+                        class="w-full content-center text-base px-4 py-2 border-b rounded-2xl border-gray-300 focus:outline-none focus:border-indigo-500"
+                        type="" placeholder="Enter your password" value="">
+                  </div>
+
+                  <div>
+                     <button type="submit"
+                        class="w-full flex justify-center bg-gradient-to-r bg-[#111] hover:bg-[#555] text-gray-100 p-4  rounded-full tracking-wide font-semibold  shadow-lg cursor-pointer transition ease-in duration-100">
+                        Sign in
+                     </button>
+                  </div>
+                  <p class="flex flex-col items-center justify-center mt-10 text-center text-md text-gray-500">
+                     <span>Already registered?</span>
+                     <a href="#"
+                        class="text-[#888] hover:text-[#111] no-underline hover:underline cursor-pointer transition ease-in duration-300">Login</a>
+                  </p>
+               </form>
+            </div>
+         </div>
+      </div>
+   </div>
+
+</body>
+
+</html>

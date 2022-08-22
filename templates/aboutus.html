@@ -1,0 +1,309 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+
+
+{% block title %}
+About Us
+{% endblock title %}
+
+
+
+{% block main %}
+
+
+<!-- main content start   -->
+
+<main class="w-full h-auto">
+
+
+   <!-- loding section start  -->
+
+   <section class="w-full h-full loding-animation-root-section">
+      <div class="loding-animation">
+         <img src="{% static 'Assets/Icon/preloader.gif' %}" alt="loder">
+      </div>
+   </section>
+
+   <!-- loding section end -->
+
+   <!--  header start  -->
+   <section class="w-full h-auto">
+      <div class="w-full h-full m-auto flex items-center"
+         style="background-image: url('{% static "Assets/Bannar/banner.jpg" %}');background-position: center;background-size: cover;background-repeat: no-repeat;">
+         <div class="max-w-[1340px] h-[400px] m-auto flex items-center">
+            <div class="w-full h-auto p-[50px]">
+               <div class="w-full h-auto text-center">
+                  <h1 class="text-[35px] text-[#111] font-semibold">About Us</h1>
+               </div>
+               <div class="w-full h-auto text-center text-[18px] p-[5px]">
+                  <span><a href="#" class="hover:text-[#666]">Home</a></span>
+                  <span>></span>
+                  <span class="text-[#111]">About Us</span>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <!--  header start  -->
+
+
+
+
+   <!-- main about content start   -->
+   <section class="w-full h-auto">
+      <div
+         class="max-w-[1340px] h-auto p-[20px] py-[100px] m-auto flex justify-between items-center lg:flex-row flex-col">
+
+         <div class=" lg:w-[860px] h-auto lg:pr-[30px]">
+
+            <div class="w-full h-auto">
+               <h1 class="text-[#111] font-semibold text-[35px] text-left">Who We Are</h1>
+               <span class="w-[80px] h-[4px] rounded-md inline-block bg-[#111] mb-[20px]"></span>
+            </div>
+
+
+
+
+            <div class="w-full h-auto text-left text-[19px] text-[#666]">
+               <p>
+                  Dorem ipsum dolor sit amet, consectetur adipiscing elit. Ut blandit nisi a dictum tristique.
+                  Nullam urna metus, vestibulum ac sodales eSed ut perspiciatis unde omnis iste natus error sit
+                  voluptatem accusantium doloremque laudantium totam remrutrumDorem ipsum dolor sit amet,
+                  consectetur adipiscing elit. Sed ut perspiciatis.Dorem ipsum dolor sit amet, consectetur
+                  adipiscing elit. Ut blandit nisi a dictum tristique.
+               </p>
+               <br>
+               <p>
+                  Dorem ipsum dolor sit amet, consectetur adipiscing elit. Ut blandit nisi a dictum tristique.
+                  Nullam urna metus, vestibulum ac sodales eSed ut perspiciatis unde omnis iste natus error sit
+                  voluptatem accusantium doloremque laudantium totam remrutrumDorem ipsum dolor sit amet,
+                  consectetur adipiscing elit. Sed ut perspiciatis.Doremque laudantium totam remrutrumDorem ipsum
+                  dolor.
+               </p>
+            </div>
+
+            <div class="w-full h-auto pt-[40px] lg:pb-[0px] pb-[30px]">
+               <button class="bg-[#111] hover:bg-[#666] text-white px-[20px] py-[12px] rounded"style="transition: all .3s ;">
+                  <a href="#" class="w-full h-auto flex justify-between items-center">
+                     <span>Take A Tour</span>
+                     <span class="pl-[10px]">
+                        <img src="{% static 'Assets/Icon/white-right-arrow-icon.svg' %}" alt="">
+                     </span>
+                  </a>
+               </button>
+            </div>
+
+         </div>
+
+         <div class="w-auto h-auto">
+            <img class="w-[400px]" src="{% static 'Assets/Image/about-pj6iavafn87xdkfs5t0ix061q1c6z53quwiqu9oodm.jpg' %}" alt="">
+         </div>
+
+
+
+      </div>
+   </section>
+   <!-- main about content end -->
+
+
+
+   <!-- why content start  -->
+   <section class="w-full h-auto bg-[#f8f8f8]">
+
+
+      <div class="max-w-[1340px] p-[20px] py-[80px] m-auto">
+         <div class="w-full h-auto text-center">
+
+            <h1 class="text-[#111] font-semibold text-[35px] text-center">Why Shop From Us</h1>
+            <span class="w-[80px] h-[4px] rounded-md inline-block bg-[#111] mb-[20px]"></span>
+         </div>
+
+
+
+         <div class="w-full h-auto flex justify-center items-center  md:flex-row flex-col">
+
+
+            <div class="w-full h-auto p-[10px]">
+               <div class=" main-card shadow w-full h-auto p-[20px] hover:shadow-lg bg-white">
+                  <div class="w-full h-auto flex justify-center items-center p-[10px]">
+                     <div
+                        class="root-card-image w-[70px] h-[70px] p-[12px] border border-[#111] rounded-full bg-[#111] ">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512.0004 512.0016" class=" w-[45px]"
+                           fill="white">
+                           <path
+                              d="M476.1584 231.364c20.2646 3.085 35.8418 20.626 35.8408 41.7373v85.5117c0 4.4277-3.5898 8.0166-8.0166 8.0166h-26.2031c0.002 0.1777 0.0137 0.3545 0.0137 0.5342 0 27.9961-22.7773 50.7715-50.7715 50.7715-27.9951 0-50.7725-22.7754-50.7725-50.7715 0-0.1787 0.0117-0.3564 0.0137-0.5342h-180.67c0.002 0.1777 0.0146 0.3545 0.0146 0.5342 0 27.9961-22.7773 50.7715-50.7725 50.7715s-50.7715-22.7754-50.7715-50.7715c0-0.1787 0.0117-0.3564 0.0137-0.5342h-43.3037c-9.1367 0-16.5684-7.4316-16.5684-16.5684v-17.6367h-26.1885c-4.4277 0-8.0166-3.5889-8.0166-8.0166 0-4.4287 3.5898-8.0176 8.0166-8.0176h76.96c4.4287 0 8.0176 3.5889 8.0176 8.0176 0 4.4277-3.5898 8.0166-8.0176 8.0166h-34.7383v17.6367c0 0.2959 0.2383 0.5342 0.5342 0.5342h46.0801c6.8857-19.8828 25.7871-34.2051 47.9824-34.2051s41.0957 14.3223 47.9824 34.2051h166.327v-60.3906c0-4.4277 3.5908-8.0176 8.0176-8.0176 4.4277 0 8.0166 3.5908 8.0166 8.0176v60.3926h3.8603c6.8848-19.8828 25.7871-34.2051 47.9824-34.2051 22.1943 0 41.0957 14.3223 47.9814 34.2051h20.9619v-35.2725h-9.0859c-13.8506 0-25.1191-11.2686-25.1191-25.1191v-17.1025c0-4.4277 3.5898-8.0166 8.0175-8.0166h24.9277c-3.3945-10.5254-13.2754-18.1631-24.9121-18.1709-0.0068 0-0.0137 0.001-0.0214 0.0009s-0.0137-0.002-0.0215-0.0019h-94.5693v9.0879c0 4.4277-3.5898 8.0166-8.0166 8.0166-4.4277 0-8.0166-3.5898-8.0166-8.0166v-145.372c0-0.2949-0.2393-0.5342-0.5342-0.5342h-307.841c-0.2959 0-0.5342 0.2393-0.5342 0.5342v145.37c0 4.4277-3.5898 8.0166-8.0176 8.0166s-8.0166-3.5898-8.0166-8.0166v-145.37c0-9.1357 7.4316-16.5684 16.5684-16.5684h307.842c9.1357 0 16.5674 7.4326 16.5674 16.5684v17.6377h60.3926c18.5645 0 33.6699 15.1045 33.6699 33.6709v8.5508c0 3.8525-2.7197 7.0684-6.3447 7.8388z m-100.976-87.06200000000001v18.1709h78.0293v-0.5332c0-9.7256-7.9121-17.6377-17.6367-17.6377h-60.3926z m0 86.58000000000001h84.3291l-13.0938-52.376h-71.2354v52.376z m-230.34699999999998 171.0233c19.1553 0 34.7393-15.583 34.7393-34.7393s-15.584-34.7393-34.7393-34.7393-34.7393 15.583-34.7393 34.7393 15.584 34.7393 34.7393 34.7393z m282.188 0c19.1543 0 34.7383-15.583 34.7383-34.7393s-15.584-34.7393-34.7383-34.7393c-19.1553 0-34.7393 15.583-34.7393 34.7393s15.584 34.7393 34.7393 34.7393z m68.94400000000002-102.61430000000001h-0.0009v-18.1719h-18.1709v9.0859c0 5.0098 4.0762 9.0859 9.0859 9.086h9.0859z m-351.132 51.30669999999998c9.1357 0 16.5684 7.4326 16.5684 16.5684s-7.4326 16.5684-16.5684 16.5684-16.5684-7.4326-16.5684-16.5684 7.4326-16.5684 16.5684-16.5684z m282.188 0c9.1357 0 16.5674 7.4326 16.5674 16.5684s-7.4316 16.5684-16.5674 16.5684c-9.1367 0-16.5684-7.4326-16.5684-16.5684s7.4316-16.5684 16.5684-16.5684z m-94.06299999999999-34.20369999999997c4.4277 0 8.0166 3.5898 8.0166 8.0176s-3.5898 8.0166-8.0166 8.0166h-119.716c-4.4277 0-8.0176-3.5889-8.0175-8.0166s3.5908-8.0176 8.0175-8.0176h119.716z m-205.22699999999998-34.204999999999984c4.4268 0 8.0166 3.5889 8.0166 8.0166s-3.5898 8.0166-8.0166 8.0166h-102.614c-4.4277 0-8.0176-3.5889-8.0175-8.0166s3.5908-8.0166 8.0175-8.0166h102.614z m151.038-108.81800000000001c3.1299 3.1309 3.1299 8.206-0.0019 11.3379l-76.96 76.96c-1.5635 1.5664-3.6162 2.3477-5.668 2.3477-2.0508 0-4.1025-0.7813-5.668-2.3477l-42.7559-42.7559c-3.1309-3.1309-3.1309-8.206 0-11.3369 3.1299-3.1309 8.206-3.1309 11.3369 0l37.0869 37.0869 71.292-71.291c3.1309-3.1309 8.207-3.1309 11.3379-0.001z">
+                           </path>
+                        </svg>
+                     </div>
+                  </div>
+                  <div class="w-full h-auto flex justify-center items-center flex-col text-center">
+                     <h1 class="text-[24px] text-[#111] font-semibold p-[4px]">FREE SHIPPING</h1>
+                     <p class="text-[#666] text-[16px] py-[8px]">
+                        Lorem Ipsum hasbeen standard daand scrambled. Rimply dummy text of the printing and
+                        typesetting industry
+                     </p>
+                  </div>
+               </div>
+            </div>
+
+
+            <div class="w-full h-auto p-[10px]">
+               <div class=" main-card shadow w-full h-auto p-[20px] hover:shadow-lg bg-white">
+                  <div class="w-full h-auto flex justify-center items-center p-[10px]">
+                     <div
+                        class="root-card-image w-[70px] h-[70px] p-[12px] border border-[#111] rounded-full bg-[#111] ">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512.0016" class=" w-[45px]"
+                           fill="white">
+                           <path
+                              d="M431.166 194.69c36.6797 2.3662 65.7217 33.0215 65.6143 70.2383v30.7627c0 37.4326-29.2578 68.0879-66.1514 70.3467-3.6572 56.1475-31.3008 84.0068-54.6426 97.667-16.5645 9.6807-33.2363 13.4453-43.7783 14.9512-5.2705 19.1465-22.8027 33.3447-43.6699 33.3447h-32.377c-24.9541 0-45.2842-20.4365-45.2842-45.3916s20.3301-45.2842 45.2842-45.2842h32.2695c20.1143 0 37.2168 13.123 43.1328 31.3008 21.5117-3.5498 67.8721-19.1465 73.1426-86.4805h-18.0703c-7.0996 0-12.9082-5.8086-12.9082-12.9072v-145.855c0-7.0996 5.8086-12.9082 12.9082-12.9082h18.5v-19.4688c0-85.082-60.5576-149.189-141.015-149.189h-16.2422c-80.3496 0-141.015 64.1074-141.015 149.189v19.4688h18.5c7.0996 0 12.9082 5.8086 12.9082 12.9082v145.963c0 7.0986-5.8086 12.9072-12.9082 12.9072h-39.6904c-38.8301 0-70.4541-31.623-70.4541-70.4541v-30.7627c0-37.3242 29.1504-67.8721 65.8291-70.3457v-19.6846c0-47.1123 16.6719-90.8906 46.8975-123.375 30.9785-33.3438 73.5732-51.6299 120.04-51.6299h16.2422c46.4668 0 89.0625 18.2861 120.04 51.6299 30.2256 32.4844 46.8975 76.2627 46.8975 123.375v19.6846z m-318.494 145.64v-120.04h-26.7832c-24.6318 0-44.6387 20.0068-44.6387 44.6387v30.7627c0 24.6318 20.0068 44.6387 44.6387 44.6387h26.7832z m175.86600000000004 145.85560000000004c10.7559 0 19.4688-8.7119 19.4688-19.4688 0-10.7559-8.7129-19.4688-19.4688-19.4688h-32.377c-10.7559 0-19.4688 8.7129-19.4688 19.4688 0 10.7568 8.7129 19.4688 19.4688 19.4688h32.377z m182.534-190.49460000000005v-30.7627c0-24.6318-20.0068-44.6387-44.6387-44.6387h-26.7832v120.04h26.7832c24.6318 0 44.6387-20.0068 44.6387-44.6387z">
+                           </path>
+                        </svg>
+                     </div>
+                  </div>
+                  <div class="w-full h-auto flex justify-center items-center flex-col text-center">
+                     <h1 class="text-[24px] text-[#111] font-semibold p-[4px]">24/7 SUPPORT</h1>
+                     <p class="text-[#666] text-[16px] py-[8px]">
+                        Lorem Ipsum hasbeen standard daand scrambled. Rimply dummy text of the printing and
+                        typesetting industry
+                     </p>
+                  </div>
+               </div>
+            </div>
+
+
+            <div class="w-full h-auto p-[10px]">
+               <div class=" main-card shadow w-full h-auto p-[20px] hover:shadow-lg bg-white">
+                  <div class="w-full h-auto flex justify-center items-center p-[10px]">
+                     <div
+                        class="root-card-image w-[70px] h-[70px] p-[12px] border border-[#111] rounded-full bg-[#111] ">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512.0016" class=" w-[45px]"
+                           fill="white">
+                           <path
+                              d="M435 288.783c0 24.3271-14.6768 45.2803-35.6318 54.5039 8.0049 10.1406 12.8018 22.9238 12.8018 36.8174 0 23.6455-13.8594 44.1133-33.8809 53.7129 5.9717 8.7422 9.0029 19.1104 8.6182 29.9434-0.9629 27.0518-23.3145 48.2402-50.8877 48.2402h-122.413c-75.3242 0-136.606-61.2803-136.606-136.606v-100.861c0-63.9932 44.2383-117.825 103.731-132.582v-77.874c0-35.332 28.7441-64.0762 64.0762-64.0762 35.3311 0 64.0752 28.7441 64.0752 64.0762v73.8496h46.6221c32.2842 0 59.4648 25.7383 60.5889 57.375 0.5303 14.8994-4.3691 29.0625-13.8379 40.3428 19.4033 9.8213 32.7441 29.9443 32.7441 53.1387z m-226.529-224.70600000000002h0.002v73.9805c1.7061-0.0635 3.4141-0.1309 5.1357-0.1309h67.5352v-73.8496c0-20.0361-16.3008-36.3369-36.3359-36.3369-20.0361 0-36.3369 16.3008-36.3369 36.3369z m166.998 256.497c17.5293 0 31.7881-14.2656 31.7881-31.7949s-14.2607-31.792-31.792-31.792h-126.025c-7.6602 0-13.8691-6.209-13.8691-13.8691s6.209-13.8701 13.8691-13.8701h107.159c8.706 0 16.832-3.4512 22.8809-9.7188 6.043-6.2627 9.2012-14.5176 8.8906-23.2451-0.5986-16.8828-15.3438-30.6201-32.8652-30.6201h-141.898c-60.0303 0-108.867 48.8369-108.867 108.867v100.861c0 60.0303 48.8369 108.867 108.867 108.867h122.413c12.3506 0 22.7422-9.6396 23.165-21.4863 0.2178-6.126-1.9981-11.9219-6.2392-16.3164-4.2441-4.3965-9.9492-6.8203-16.0576-6.8203h-87.4463c-7.6602 0-13.8691-6.209-13.8691-13.8691s6.209-13.8701 13.8691-13.8701h103.196c17.5312 0 31.793-14.2598 31.793-31.791s-14.2617-31.793-31.793-31.793h-103.196c-7.6602 0-13.8691-6.21-13.8691-13.8701 0-7.6592 6.209-13.8691 13.8691-13.8691h103.196 22.8311z">
+                           </path>
+                        </svg>
+                     </div>
+                  </div>
+                  <div class="w-full h-auto flex justify-center items-center flex-col text-center">
+                     <h1 class="text-[24px] text-[#111] font-semibold p-[4px]">EASY RETURN</h1>
+                     <p class="text-[#666] text-[16px] py-[8px]">
+                        Lorem Ipsum hasbeen standard daand scrambled. Rimply dummy text of the printing and
+                        typesetting industry
+                     </p>
+                  </div>
+               </div>
+            </div>
+
+
+         </div>
+
+
+
+
+
+      </div>
+
+
+   </section>
+   <!-- why content end -->
+
+
+
+   <!-- delibary section start -->
+   <section class="w-full h-auto "style="background-image: url('{% static "Assets/Image/section1.jpg" %}');background-position: center;background-size: cover; background-repeat: no-repeat;background-attachment: fixed;">
+      <div class="w-full h-auto  bg-[#1111119d] p-[40px]">
+         <div class="max-w-[1340px] h-auto p-[20px] py-[50px] m-auto ">
+            <div class="w-full h-auto flex justify-center items-center flex-col text-[#fff] p-[20px]">
+               <h1 class="text-[40px] font-semibold md:p-[10px] pb-[6px] text-center">We Deliver Genuine Products
+               </h1>
+               <div class="w-full h-auto px-[0px] md:px-[100px]">
+                  <p class="text-[19px] p-[8px] text-center">Lorem Ipsum has been the industrys standard dummy text
+                     ever
+                     since
+                     printer took
+                     a galley. Rimply
+                     dummy
+                     text of the printing and typesetting industry</p>
+               </div>
+               <div class="w-full h-auto p-[20px] flex justify-center items-center">
+                  <button
+                     class="bg-[#fff] px-[20px] py-[12px] text-[#111] hover:text-[#111111b7] hover:bg-[#eeeeeec0]  rounded text-[18px]"style="transition: all .2s;"><a href="#">Contact Us</a></button>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-- delibary section end -->
+
+
+
+
+   <!-- testimonial section start  -->
+
+   <section class="w-full h-auto bg-[#bbbbbb42]">
+
+      <div class="max-w-[1340px] p-[20px] py-[50px] m-auto">
+   
+            <!-- Inner -->
+            <div class="carousel-inner relative w-full overflow-hidden">
+               <!-- Single item -->
+               <div class="carousel-item active relative float-left w-full text-center ">
+   
+                  <ol class="new-producat-add cards slider font-normal whitespace-nowrap list-none">
+                     <li  class="w-[300px] pr-[10px] inline-block">
+                  <img class="w-[115px] h-[100px] mx-[35px] inline-block" src="{% static 'Assets/brand/brand1.png' %}"
+                  alt="">
+                     </li>
+                     <li  class="w-[300px] pr-[10px] inline-block">
+                  
+                        <img class="w-[115px] h-[100px] mx-[35px] inline-block" src="{% static 'Assets/brand/brand2.png' %}"
+                        alt="">
+                     </li>
+                     <li  class="w-[300px] pr-[10px] inline-block">
+                  <img class="w-[115px] h-[100px] mx-[35px] inline-block" src="{% static 'Assets/brand/brand1.png' %}"
+                  alt="">
+                     </li>
+                     <li  class="w-[300px] pr-[10px] inline-block">
+                  
+   
+                        <img class="w-[115px] h-[100px] mx-[35px] inline-block" src="{% static 'Assets/brand/brand4.png' %}"
+                        alt="">
+                     </li>
+                     <li  class="w-[300px] pr-[10px] inline-block">
+                  
+                        <img class="w-[115px] h-[100px] mx-[35px] inline-block" src="{% static 'Assets/brand/brand5.png' %}"
+                        alt="">
+                     </li>
+                     <li  class="w-[300px] pr-[10px] inline-block">
+                        <img class="w-[115px] h-[100px] mx-[35px] inline-block" src="{% static 'Assets/brand/brand6.png' %}"
+                           alt="">
+                     </li>
+                     <li  class="w-[300px] pr-[10px] inline-block">
+                       
+                  <img class="w-[115px] h-[100px] mx-[35px] inline-block" src="{% static 'Assets/brand/brand4.png' %}"
+                  alt="">
+                     </li>
+                  </ol>
+   
+   
+   
+               </div>
+            </div>
+   
+   
+      </div>
+   
+   </section>
+
+   <!-- testimonial section end -->
+
+
+
+
+
+</main>
+
+<!-- main content end -->
+
+{% endblock main %}

@@ -1,0 +1,185 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+
+{% block title %}
+Contact
+{% endblock title %}
+
+
+{% block main %}
+
+
+<main class="w-full h-auto">
+
+
+   <!-- loding section start  -->
+
+   <section class="w-full h-full loding-animation-root-section">
+      <div class="loding-animation">
+         <img src="../Assets/Icon/preloader.gif" alt="loder">
+      </div>
+   </section>
+
+   <!-- loding section end -->
+
+
+
+   <!-- contact header start  -->
+   <section class="w-full h-auto">
+      <div class="w-full h-full m-auto flex items-center"
+         style="background-image: url(../Assets/Bannar/banner.jpg);background-position: center;background-size: cover;background-repeat: no-repeat;">
+         <div class="max-w-[1340px] h-[400px] m-auto flex items-center">
+            <div class="w-full h-auto p-[50px]">
+               <div class="w-full h-auto text-center">
+                  <h1 class="text-[35px] text-[#111] font-semibold">Contact</h1>
+               </div>
+               <div class="w-full h-auto text-center text-[18px] p-[5px]">
+                  <span><a href="#" class="hover:text-[#666]">Home</a></span>
+                  <span>></span>
+                  <span class="text-[#111]">Contact</span>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-- contact header start  -->
+
+
+
+   <!-- contact deatails section  start  -->
+   <section class="w-full h-auto">
+
+      <div class="max-w-[1300px] h-auto m-auto flex justify-center items-center lg:flex-row flex-col ">
+
+         <div class="w-full">
+            <iframe
+               src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d236191.0105621433!2d91.84159669999997!3d22.335326100000014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1648807221169!5m2!1sen!2sbd"
+               class="min-w-[100%] min-h-[500px] xl:w-[600px] xl:h-[500px] " style="border:0;" allowfullscreen=""
+               loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+         </div>
+
+
+         <div class="w-full">
+
+            <div class="p-[30px]">
+               <h1 class="text-[#111] text-[30px] font-semibold">Looking Forward to Hear From You</h1>
+               <p class="text-[#666] text-[19px]">Contact sit amet, consectetur adipiscing elit, sed do eiusmod
+                  tempor incididunt
+                  ut labore et dolore
+                  magna aliqua.</p>
+
+               <ul>
+
+
+                  <li class="w-full h-auto flex justify-start align-middle mt-[25px]" style="align-items: center">
+                     <span class="">
+                        <img class="w-[40px] h-[60px]" src="../Assets/Icon/black location.svg" alt="location" />
+                     </span>
+                     <div class="pl-[20px]">
+                        <h1 class="text-[28px]">Address</h1>
+                        <span class=" text-[#666] text-[19px]">59 Street, Newyork City, Rose Town, 05 Rive
+                           House</span>
+                     </div>
+                  </li>
+
+                  <li class="w-full h-auto flex justify-start align-middle mt-[25px]" style="align-items: center">
+                     <span>
+                        <img class="w-[40px] h-[60px]" src="../Assets/Icon/black phone.svg" alt="Phone" />
+                     </span>
+                     <div class="pl-[20px]">
+                        <h1 class="text-[28px]">Phone</h1>
+                        <span class=" text-[#666] text-[19px]">+1234567890
+                        </span>
+                     </div>
+                  </li>
+
+                  <li class="w-full h-auto flex justify-start align-middle mt-[25px]" style="align-items: center">
+                     <span>
+                        <img class="w-[40px] h-[60px]" src="../Assets/Icon/black email.svg" alt="Email" />
+                     </span>
+                     <div class="pl-[20px]">
+                        <h1 class="text-[28px]">Email</h1>
+                        <span class=" text-[#666] text-[19px]">info@example.com
+                        </span>
+                     </div>
+                  </li>
+
+
+
+               </ul>
+
+
+
+            </div>
+
+
+         </div>
+
+      </div>
+
+
+   </section>
+   <!-- contact deatails section  start  -->
+
+
+
+   <!-- form section start -->
+
+   <section class="w-full h-auto bg-[#ddd]">
+
+      <div class="max-w-[1340px] h-auto px-[20px] py-[80px] m-auto ">
+         <div class="w-full h-auto px-[20px] py-[30px] bg-white shadow-md rounded">
+
+
+            <div class="w-full h-auto">
+               <h1 class="text-[30px] text-[#111] text-center font-semibold p-[10px] pb-[25px]">Send Us a Message
+               </h1>
+            </div>
+
+            <div>
+
+               <form class="w-full h-auto" action="#">
+                  <div class="w-full h-auto md:flex">
+
+                     <input class="border rounded outline-none w-full h-auto p-3 mb-3  md:mr-2" type="text"
+                        placeholder="Name *">
+                     <input class="border rounded  outline-none w-full h-auto p-3  mb-3  md:ml-2" type="text"
+                        placeholder="Email *">
+
+                  </div>
+                  <div class="w-full h-auto  md:flex">
+
+                     <input class="border rounded outline-none w-full h-auto p-3 mb-3  md:mr-2" type="text"
+                        placeholder="Subject *">
+                     <input class="border rounded  outline-none w-full h-auto p-3  mb-3  md:ml-2" type="text"
+                        placeholder="Phone">
+                  </div>
+                  <div class=" w-full h-auto">
+                     <textarea class="border rounded  outline-none w-full p-3  mb-3" cols="50"
+                        placeholder="Message *"></textarea>
+                  </div>
+                  <button type="submit" class="p-[10px] px-[20px] rounded  bg-[#111] text-white">Submit</button>
+               </form>
+
+            </div>
+
+         </div>
+      </div>
+
+   </section>
+
+   <!-- form section end -->
+
+
+
+
+
+
+
+
+</main>
+
+
+
+{% endblock main %}

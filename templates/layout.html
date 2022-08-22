@@ -1,0 +1,390 @@
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=7" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="keywords" content="e-commrce web application" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+    rel="stylesheet" />
+
+  <title>{% block title %} {% endblock title %}</title>
+
+  <link rel="stylesheet" href="{% static 'css/main.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+
+  <!-- jquery link  -->
+  <script type="text/javascript" src="{% static 'Js/jquery-1.11.0.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'Js/jquery-migrate-1.2.1.min.js' %}"></script>
+
+  <!-- slick slider css link -->
+  <link rel="stylesheet" type="text/css" href="{% static 'css/slick-theme.css' %}" />
+  <link rel="stylesheet" type="text/css" href="{% static 'css/slick-theme.min.css' %}" />
+
+  <!-- slick slider js link  -->
+  <script type="text/javascript" src="{% static 'Js/slick.min.js' %}"></script>
+</head>
+
+<body style="font-family: 'Josefin Sans', sans-serif">
+  <!-- header start  -->
+  <header class="w-full h-[81px]">
+    <section class="w-full header fixed z-50 bg-white">
+      <div class="lg:w-[1000px] bg-white z-50 p-[20px] xl:w-[1200px] m-auto flex justify-between align-middle"
+        style="align-items: center">
+        <!-- logo div start  -->
+        <div class="w-[120px]">
+          <a href=" {% url 'home' %} ">
+            <img class="w-[110px] cursor-pointer" src="{% static 'Assets/Icon/logo-dark.png' %}" alt="Logo" />
+          </a>
+        </div>
+        <!-- logo div end  -->
+
+        <!-- nav div start  -->
+        <div class="w-[400px] lg:block hidden">
+          <ul class="list-none flex align-middle justify-between">
+            <li class="w-[70px] text-[17px]">
+              <a href=" {% url 'home' %} " class="w-full flex align-middle justify-between cursor-pointer">
+                <span class="text-[#111] font-medium">Home</span>
+                <span>
+                  <img class="w-[15px] h-full" src="{% static 'Assets/Icon/down-arrow-icon.svg' %}"
+                    alt="Down-Arrow-Icon" />
+                </span>
+              </a>
+            </li>
+
+            <li class="w-[65px] text-[17px]">
+              <a href="{% url 'shops' %}" class="w-full flex align-middle justify-between cursor-pointer">
+                <span class="text-[#111] font-medium">Shop</span>
+                <span>
+                  <img class="w-[15px] h-full" src="{% static 'Assets/Icon/down-arrow-icon.svg' %}"
+                    alt="Down-Arrow-Icon" />
+                </span>
+              </a>
+            </li>
+
+            <li class="w-[95px] text-[17px]">
+              <a href=" {% url 'aboutus' %} " class="w-full flex align-middle justify-between cursor-pointer">
+                <span class="text-[#111] font-medium">About us</span>
+                <span>
+                  <img class="w-[15px] h-full" src="{% static 'Assets/Icon/down-arrow-icon.svg' %}"
+                    alt="Down-Arrow-Icon" />
+                </span>
+              </a>
+            </li>
+
+            <li class="w-[83px] text-[17px]">
+              <a href="{% url 'contact' %}" class="w-full flex align-middle justify-between cursor-pointer">
+                <span class="text-[#111] font-medium">Contact </span>
+                <span>
+                  <img class="w-[15px] h-full" src="{% static 'Assets/Icon/down-arrow-icon.svg' %}"
+                    alt="Down-Arrow-Icon" />
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- nav div end  -->
+
+        <!-- another utility div start  -->
+        <div class="md:w-[265px] flex align-middle items-center md:items-start justify-between sm:w-[220px] w-[215px]">
+          <!-- search div icon start  -->
+          <div class="w-[30px]">
+            <img class="w-[28px] cursor-pointer" src="{% static 'Assets/Icon/search.svg' %}" alt="Search Icon" />
+          </div>
+          <!-- search div icon end -->
+
+          <!-- user div icon start  -->
+          <div class="w-[30px]">
+            <img class="w-[28px] cursor-pointer" src="{% static 'Assets/Icon/user.png' %}" alt="User Icon" />
+          </div>
+          <!-- user div icon end -->
+
+          <!-- hart div icon start  -->
+          <div class="w-[30px] relative">
+            <img class="w-[28px] cursor-pointer" src="{% static 'Assets/Icon/heart.png' %}" alt="Heart Icon" />
+            <span
+              class="w-[25px] h-[25px] bg-[#111] text-white inline-block absolute top-[-13px] right-[-15px] text-center rounded-[100%] text-[17px] shadow-md">0</span>
+          </div>
+          <!-- hart div icon end -->
+
+          <!-- shoping cart div icon start  -->
+          <div class="w-[30px] relative">
+            <img class="w-[28px] cursor-pointer" src="{% static 'Assets/Icon/shopping-cart.png' %}"
+              alt="shoping cart icon" />
+            <span
+              class="w-[25px] h-[25px] bg-[#111] text-white inline-block absolute top-[-13px] right-[-15px] text-center rounded-[100%] text-[17px] shadow-md">0</span>
+          </div>
+          <!-- shoping cart div icon end  -->
+
+          <!-- amount of items in cart start -->
+          <div class="w-[70px] h-auto relative md:block hidden">
+            <span class="text-[24px] absolute top-[-2px] left-1 text-[#666]">$</span>
+            <span class="text-[24px] absolute top-[-2px] left-5 text-[#666]">0.00</span>
+          </div>
+          <!-- amount of items in cart end -->
+
+          <!-- menu icon start  -->
+
+          <div class="w-[32px] lg:hidden">
+            <img class="w-[30px] cursor-pointer menu-button" src="{% static 'Assets/Icon/menu-icon.svg' %}"
+              alt="menu-icon" />
+          </div>
+
+          <!-- menu icon end -->
+        </div>
+        <!-- another utility div end  -->
+      </div>
+
+      <!-- dropdown section start  -->
+      <section class="max-w-[1340px] h-auto block lg:hidden relative z-40">
+        <div class="menu-list w-full h-auto absolute menubottomtotop top-[-280px] shadow-lg bg-white z-50"
+          style="transition: all 0.3s linear">
+          <ul class="w-full list-none">
+            <li class="w-full h-auto p-[10px] border-y cursor-pointer hover:bg-[#e0e0e0]">
+              <a href="{% url 'home' %}">Home</a>
+            </li>
+            <li class="w-full h-auto p-[10px] border-y cursor-pointer hover:bg-[#e0e0e0]">
+              <a href="{% url 'shops' %}">Shops</a>
+            </li>
+            <li class="w-full h-auto p-[10px] border-y cursor-pointer hover:bg-[#e0e0e0]">
+              <a href="{% url 'aboutus' %}">About</a>
+            </li>
+
+            <li class="w-full h-auto p-[10px] border-y cursor-pointer hover:bg-[#e0e0e0]">
+              <a href="{% url 'contact' %}">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- dropdown section end  -->
+    </section>
+  </header>
+  <!-- header end  -->
+
+  <!-- main content start -->
+  <main class="w-full h-auto">{% block main %} {% endblock main %}</main>
+  <!-- main content end -->
+
+  <!-- footer start  -->
+  <footer class="w-full h-auto bg-[#111]">
+    <div class="max-w-[1200px] px-[20px] m-auto text-[#adadad]">
+      <div
+        class="w-full grid grid-rows-4 md:grid-rows-2 lg:grid-rows-1 lg:grid-cols-4 grid-cols-1 md:grid-cols-2 pt-[50px] pb-[30px]">
+        <!-- first coloum start  -->
+        <div class="w-[95%] h-auto pr-[20px] pb-[20px]">
+          <ul class="list-none text-left">
+            <li class="w-full h-auto mb-[40px]">
+              <img class="w-[160px]" src="{% static 'Assets/Icon/logo-light.png' %}" alt="logo" />
+            </li>
+
+            <li class="w-full h-auto flex justify-start align-middle mt-[25px]" style="align-items: center">
+              <span class="sm:w-[30px] lg:w-[60px]">
+                <img class="w-[30px] h-[35px]" src="{% static 'Assets/Icon/location-icon.svg' %}" alt="location" />
+              </span>
+              <span class="pl-[13px] hover:text-white text-[16px]">59 Street, Newyork City, Rose Town, 05 Rive
+                House</span>
+            </li>
+
+            <li class="w-full h-auto flex justify-start align-middle mt-[25px]" style="align-items: center">
+              <span>
+                <img class="w-[25px] h-[30px]" src="{% static 'Assets/Icon/phone-icon.svg' %}" alt="Phone" />
+              </span>
+              <span class="pl-[13px] hover:text-white text-[16px] cursor-pointer">+1234567890</span>
+            </li>
+
+            <li class="w-full h-auto flex justify-start align-middle mt-[25px]" style="align-items: center">
+              <span>
+                <img class="w-[25px] h-[30px]" src="{% static 'Assets/Icon/email-icon.svg' %}" alt="Email" />
+              </span>
+              <span class="pl-[13px] hover:text-white text-[16px] cursor-pointer">info@example.com
+              </span>
+            </li>
+          </ul>
+        </div>
+        <!-- first coloum end  -->
+
+        <!-- secoend coloum start  -->
+        <div class="w-full h-auto pb-[40px]">
+          <div class="w-full h-auto pb-[10px]">
+            <span class="text-[20px] font-semibold">Information</span>
+            <span class="w-[60px] h-[4px] bg-white rounded-md block my-[10px]"></span>
+          </div>
+
+          <ul class="list-none text-left">
+            <li class="text-[16px] hover:text-white mt-[18px] cursor-pointer">
+              <a href="#">About Us</a>
+            </li>
+            <li class="text-[16px] hover:text-white mt-[18px] cursor-pointer">
+              <a href="#">Latest Post</a>
+            </li>
+            <li class="text-[16px] hover:text-white mt-[18px] cursor-pointer">
+              <a href="#">Selling Tips</a>
+            </li>
+            <li class="text-[16px] hover:text-white mt-[18px] cursor-pointer">
+              <a href="#">Advertising</a>
+            </li>
+            <li class="text-[16px] hover:text-white mt-[18px] cursor-pointer">
+              <a href="#">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+        <!-- secoend coloum end  -->
+
+        <!-- third coloum start  -->
+        <div class="w-full h-auto pb-[40px]">
+          <div class="w-full h-auto pb-[10px]">
+            <span class="text-[20px] font-semibold">My Account</span>
+            <span class="w-[60px] h-[4px] bg-white rounded-md block my-[10px]"></span>
+          </div>
+
+          <ul class="list-none text-left">
+            <li class="text-[16px] hover:text-white mt-[18px] cursor-pointer">
+              <a href="#">My Account</a>
+            </li>
+            <li class="text-[16px] hover:text-white mt-[18px] cursor-pointer">
+              <a href="#">Login/Register</a>
+            </li>
+            <li class="text-[16px] hover:text-white mt-[18px] cursor-pointer">
+              <a href="#">Cart</a>
+            </li>
+            <li class="text-[16px] hover:text-white mt-[18px] cursor-pointer">
+              <a href="#">Wishlist</a>
+            </li>
+            <li class="text-[16px] hover:text-white mt-[18px] cursor-pointer">
+              <a href="#">Order History</a>
+            </li>
+          </ul>
+        </div>
+        <!-- third coloum end  -->
+
+        <!-- fourth coloum start  -->
+        <div class="w-full h-auto pb-[40px]">
+          <div class="w-full h-auto pb-[10px]">
+            <span class="text-[20px] font-semibold">Help & Support</span>
+            <span class="w-[60px] h-[4px] bg-white rounded-md block my-[10px]"></span>
+          </div>
+          <ul class="list-none text-left">
+            <li class="text-[16px] hover:text-white mt-[18px] cursor-pointer">
+              <a href="#">How To Shop</a>
+            </li>
+            <li class="text-[16px] hover:text-white mt-[18px] cursor-pointer">
+              <a href="#">Payment</a>
+            </li>
+            <li class="text-[16px] hover:text-white mt-[18px] cursor-pointer">
+              <a href="#">Returns</a>
+            </li>
+            <li class="text-[16px] hover:text-white mt-[18px] cursor-pointer">
+              <a href="#">Delivery</a>
+            </li>
+            <li class="text-[16px] hover:text-white mt-[18px] cursor-pointer">
+              <a href="#">Privacy & Cookie Policy</a>
+            </li>
+          </ul>
+        </div>
+        <!-- fourth coloum end  -->
+      </div>
+    </div>
+
+    <div class="w-full h-[1px] bg-[#666]"></div>
+
+    <div class="w-full h-auto">
+      <div
+        class="max-w-[1200px] m-auto h-auto grid grid-rows-3 md:grid-rows-1 grid-cols-1 md:grid-cols-3 lg:grid-cols-4 px-[20px] py-[35px]">
+        <div
+          class="text-[#adadad] col-start-1 col-end-5 lg:col-start-1 lg:col-end-3 lg:row-start-1 lg:row-end-2 text-center lg:text-left py-[15px]">
+          © Copyright Metro 2020. Designed and Developed by RadiusTheme
+        </div>
+
+        <!-- socal icon start  -->
+        <div
+          class="socal-icon col-start-1 col-end-5 row-start-2 row-end-2 lg:col-start-3 lg:col-end-4 lg:row-start-1 lg:row-end-2">
+          <ul
+            class="flex w-[70%] md:w-[40%] lg:w-[80%] m-auto lg:m-0 lg:pl-[0px] justify-evenly lg:justify-start align-middle px-[20px] py-[15px]">
+            <li class="lg:pr-[10px]">
+              <a href="#">
+                <img class="w-[20px] h-[20px] block" src="{% static 'Assets/Icon/email-icon.svg' %}" alt="" />
+                <img class="w-[20px] h-[20px] hidden" src="{% static 'Assets/Icon/Facebook white.svg' %}" alt="" />
+              </a>
+            </li>
+            <li class="lg:pr-[10px]">
+              <a href="#">
+                <img class="w-[20px] h-[20px] block" src="{% static 'Assets/Icon/Twitch gray.svg' %}" alt="" />
+                <img class="w-[20px] h-[20px] hidden" src="{% static 'Assets/Icon/Twitch white.svg' %}" alt="" />
+              </a>
+            </li>
+            <li class="lg:pr-[10px]">
+              <a href="#">
+                <img class="w-[20px] h-[20px] block" src="{% static 'Assets/Icon/Linkedin gray.svg' %}" alt="" />
+                <img class="w-[20px] h-[20px] hidden" src="{% static 'Assets/Icon/Linkedin white.svg' %}" alt="" />
+              </a>
+            </li>
+            <li class="lg:pr-[10px]">
+              <a href="#">
+                <img class="w-[20px] h-[20px] block" src="{% static 'Assets/Icon/Pinterest gray.svg' %}" alt="" />
+                <img class="w-[20px] h-[20px] hidden" src="{% static 'Assets/Icon/Pinterest white.svg' %}" alt="" />
+              </a>
+            </li>
+            <li class="lg:pr-[10px]">
+              <a href="#">
+                <img class="w-[20px] h-[20px] block" src="{% static 'Assets/Icon/Dribbble gray.svg' %}" alt="" />
+                <img class="w-[20px] h-[20px] hidden" src="{% static 'Assets/Icon/Dribbble white.svg' %}" alt="" />
+              </a>
+            </li>
+            <li class="lg:pr-[10px]">
+              <a href="#">
+                <img class="w-[20px] h-[20px] block" src="{% static 'Assets/Icon/Youtube gray.svg' %}" alt="" />
+                <img class="w-[20px] h-[20px] hidden" src="{% static 'Assets/Icon/Youtube white.svg' %}" alt="" />
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- socal icon end  -->
+
+        <div
+          class="col-start-1 col-end-5 lg:col-start-4 lg:col-end-5 row-start-3 row-end-4 lg:row-start-1 lg:row-end-2">
+          <ul
+            class="lg:w-[100%] md:w-[40%] sm:w-[70%] m-auto list-none flex justify-evenly align-middle p-[10px] lg:p-[0px]"
+            style="align-items: center">
+            <li>
+              <a href="#"><img class="w-[60px]" src="{% static 'Assets/Icon/payment1.png' %}" alt="" /></a>
+            </li>
+            <li>
+              <a href="#"><img class="w-[60px]" src="{% static 'Assets/Icon/payment2.png' %}" alt="" /></a>
+            </li>
+            <li>
+              <a href="#"><img class="w-[60px]" src="{% static 'Assets/Icon/payment3.png' %}" alt="" /></a>
+            </li>
+            <li>
+              <a href="#"><img class="w-[60px]" src="{% static 'Assets/Icon/payment4.png' %}" alt="" /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- footer end  -->
+
+  <!-- bottom to top button start  -->
+  <div
+    class="upbutton hidden w-[40px] cursor-pointer p-[5px] rounded shadow-lg h-auto fixed bottom-5 right-5 bg-[#111] z-10">
+    <a href="#" class="">
+      <img class="w-[30px]" src="{% static 'Assets/Icon/Double Up.svg' %}" alt="" />
+    </a>
+  </div>
+  <!-- bottom to top button end -->
+
+  <script type="text/javascript" src="{% static 'Js/slick-slider.js' %}"></script>
+  <script type="text/javascript" src="{% static 'Js/categories-button.js' %}"></script>
+  <script type="text/javascript" src="{% static 'Js/carousel.js' %}"></script>
+  <script type="text/javascript" src="{% static 'Js/loding-animation.js' %}"></script>
+  <script type="text/javascript" src="{% static 'Js/scroll-fixed-navbar.js' %}"></script>
+  <script type="text/javascript" src="{% static 'Js/menu-click.js' %}"></script>
+</body>
+
+</html>

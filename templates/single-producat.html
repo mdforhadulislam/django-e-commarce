@@ -1,0 +1,479 @@
+{% extends 'layout.html' %}
+
+{% load static %}
+
+
+{% block title %}
+producat
+{% endblock title %}
+
+
+
+{% block main %}
+
+
+<!-- main content start -->
+<main class="w-full h-auto">
+
+
+   <!-- loding section start  -->
+   <section class="w-full h-full loding-animation-root-section">
+      <div class="loding-animation">
+         <img src="{% static 'Assets/Icon/preloader.gif' %}" alt="loder">
+      </div>
+   </section>
+   <!-- loding section end -->
+
+
+   <!-- producat header start  -->
+   <section class="w-full h-auto">
+      <div class="w-full h-full m-auto flex items-center" style="background-image: url('{% static "Assets/Bannar/banner.jpg" %}');background-position: center;background-size: cover;background-repeat:
+         no-repeat;">
+         <div class="max-w-[1340px] h-[400px] m-auto flex items-center">
+            <div class="w-full h-auto p-[50px]">
+               <div class="w-full h-auto text-center">
+                  <h1 class="text-[35px] text-[#111] font-semibold">{{Producat_data.title}}</h1>
+               </div>
+               <div class="w-full h-auto text-center text-[18px] p-[5px]">
+                  <span><a href="#" class="hover:text-[#666]">Home</a></span>
+                  <span>></span>
+                  <span class="text-[#111]">Products</span>
+                  <span>></span>
+                  <span>({{Producat_data.title}})</span>
+               </div>
+            </div>
+         </div>
+      </div>
+
+   </section>
+   <!-- producat header start  -->
+
+   <!-- producat deatils start  -->
+
+   <section class="w-full h-auto">
+      <div class="max-w-[1340px] h-auto m-auto p-[20px] pt-[40px] pb-[60px]">
+
+         <div class="w-full h-auto">
+
+            <!-- Product info -->
+            <div
+               class="max-w-2xl mx-auto pt-10 pb-16 px-4 sm:px-6 lg:max-w-7xl lg:pt-16 lg:pb-24 lg:px-8 lg:grid lg:grid-cols-3 lg:grid-rows-[auto,auto,1fr] lg:gap-x-8">
+
+
+
+               <div class="lg:col-span-2 lg:border-r lg:border-gray-200 lg:pr-8">
+
+
+
+                  <!-- Image gallery -->
+                  <div id="carouselDarkVariant" class="carousel slide carousel-fade carousel-dark relative"
+                     data-bs-ride="carousel">
+                     <!-- Inner -->
+                     <div class="carousel-inner relative w-full overflow-hidden">
+                        <!-- Single item -->
+                        <div class="carousel-item active relative float-left w-full">
+                           <img src="{{MEDIA_URL}}{{Producat_data.produca_image_1}}"
+                              class="block w-full h-full lg:h-[495px]" alt="Motorbike Smoke" />
+                        </div>
+
+                        <!-- Single item -->
+                        <div class="carousel-item active relative float-left w-full">
+                           <img src="{{MEDIA_URL}}{{Producat_data.produca_image_2}}"
+                              class="block w-full h-full lg:h-[495px]" alt="Motorbike Smoke" />
+                        </div>
+
+
+                        <!-- Single item -->
+                        <div class="carousel-item active relative float-left w-full">
+                           <img src="{{MEDIA_URL}}{{Producat_data.produca_image_3}}"
+                              class="block w-full h-full lg:h-[495px]" alt="Motorbike Smoke" />
+                        </div>
+
+
+                        <!-- Single item -->
+                        <div class="carousel-item active relative float-left w-full">
+                           <img src="{{MEDIA_URL}}{{Producat_data.produca_image_4}}"
+                              class="block w-full h-full lg:h-[495px]" alt="Motorbike Smoke" />
+                        </div>
+
+
+                        <!-- Single item -->
+                        <div class="carousel-item active relative float-left w-full">
+                           <img src="{{MEDIA_URL}}{{Producat_data.produca_image_5}}"
+                              class="block w-full h-full lg:h-[495px]" alt="Motorbike Smoke" />
+                        </div>
+
+                     </div>
+                     <!-- Inner -->
+
+                     <!-- Controls -->
+                     <button
+                        class="carousel-control-prev absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline left-0"
+                        type="button" data-bs-target="#carouselDarkVariant" data-bs-slide="prev">
+                        <span
+                           class="carousel-control-prev-icon inline-block hover:bg-white bg-black rounded-md shadow-md"
+                           aria-hidden="true"></span>
+                     </button>
+                     <button
+                        class="carousel-control-next absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline right-0"
+                        type="button" data-bs-target="#carouselDarkVariant" data-bs-slide="next">
+                        <span
+                           class="carousel-control-next-icon inline-block hover:bg-white bg-black rounded-md shadow-md"
+                           aria-hidden="true"></span>
+                     </button>
+                  </div>
+
+
+
+
+               </div>
+
+               <!-- Options -->
+               <div class="mt-4 lg:mt-0 lg:row-span-3">
+                  <h2 class="sr-only">Product information</h2>
+                  <p class="text-3xl text-gray-900">$192</p>
+
+
+
+                  <form class="mt-10">
+                     <!-- Colors -->
+                     <div>
+                        <h3 class="text-sm text-gray-900 font-medium">Color</h3>
+
+                        <fieldset class="mt-4">
+                           <legend class="sr-only">Choose a color</legend>
+                           <div class="flex items-center space-x-3 ">
+                              <!--
+                  Active and Checked: "ring ring-offset-1"
+                  Not Active and Checked: "ring-2"
+                -->
+                              <label
+                                 class="color -m-0.5 relative p-0.5 rounded-full flex items-center justify-center cursor-pointer focus:outline-none ring-gray-400 ring ring-offset-1">
+                                 <input type="radio" name="color-choice" value="White" class="sr-only"
+                                    aria-labelledby="color-choice-0-label">
+                                 <p id="color-choice-0-label" class="sr-only">White</p>
+                                 <span aria-hidden="true"
+                                    class="h-8 w-8 bg-white border border-black border-opacity-10 rounded-full"></span>
+                              </label>
+
+                              <!--
+                  Active and Checked: "ring ring-offset-1"
+                  Not Active and Checked: "ring-2"
+                -->
+                              <label
+                                 class="color -m-0.5 relative p-0.5 rounded-full flex items-center justify-center cursor-pointer focus:outline-none ring-gray-400">
+                                 <input type="radio" name="color-choice" value="Gray" class="sr-only"
+                                    aria-labelledby="color-choice-1-label">
+                                 <p id="color-choice-1-label" class="sr-only">Gray</p>
+                                 <span aria-hidden="true"
+                                    class="h-8 w-8 bg-gray-200 border border-black border-opacity-10 rounded-full"></span>
+                              </label>
+
+                              <!--
+                  Active and Checked: "ring ring-offset-1"
+                  Not Active and Checked: "ring-2"
+                -->
+                              <label
+                                 class="color -m-0.5 relative p-0.5 rounded-full flex items-center justify-center cursor-pointer focus:outline-none ring-gray-900">
+                                 <input type="radio" name="color-choice" value="Black" class="sr-only"
+                                    aria-labelledby="color-choice-2-label">
+                                 <p id="color-choice-2-label" class="sr-only">Black</p>
+                                 <span aria-hidden="true"
+                                    class="h-8 w-8 bg-gray-900 border border-black border-opacity-10 rounded-full"></span>
+                              </label>
+                           </div>
+                        </fieldset>
+                     </div>
+
+                     <!-- Sizes -->
+                     <div class="mt-10">
+                        <div class="flex items-center justify-between">
+                           <h3 class="text-sm text-gray-900 font-medium">Size</h3>
+                           <a href="#" class="text-sm font-medium text-[#111]">Size
+                              guide</a>
+                        </div>
+
+                        <fieldset class="mt-4">
+                           <legend class="sr-only">Choose a size</legend>
+                           <div class="grid grid-cols-4 gap-4 sm:grid-cols-8 lg:grid-cols-4">
+                              <!-- Active: "ring-2 ring-indigo-500" -->
+                              <label
+                                 class="group relative border rounded-md py-3 px-4 flex items-center justify-center text-sm font-medium uppercase hover:bg-gray-50 focus:outline-none sm:flex-1 sm:py-6 bg-gray-50 text-gray-200 cursor-not-allowed  size-button">
+                                 <input type="radio" name="size-choice" value="XXS" disabled class="sr-only"
+                                    aria-labelledby="size-choice-0-label">
+                                 <p id="size-choice-0-label">XXS</p>
+
+                                 <div aria-hidden="true"
+                                    class="absolute -inset-px rounded-md border-2 border-gray-200 pointer-events-none">
+                                    <svg class="absolute inset-0 w-full h-full text-gray-200 stroke-2"
+                                       viewBox="0 0 100 100" preserveAspectRatio="none" stroke="currentColor">
+                                       <line x1="0" y1="100" x2="100" y2="0" vector-effect="non-scaling-stroke" />
+                                    </svg>
+                                 </div>
+                              </label>
+
+                              <!-- Active: "ring-2 ring-indigo-500" -->
+                              <label
+                                 class="group relative border rounded-md py-3 px-4 flex items-center justify-center text-sm font-medium uppercase hover:bg-gray-50 focus:outline-none sm:flex-1 sm:py-6 bg-white shadow-sm text-gray-900 cursor-pointer size-button">
+                                 <input type="radio" name="size-choice" value="XS" class="sr-only"
+                                    aria-labelledby="size-choice-1-label">
+                                 <p id="size-choice-1-label">XS</p>
+
+                                 <!--
+                    Active: "border", Not Active: "border-2"
+                    Checked: "border-indigo-500", Not Checked: "border-transparent"
+                  -->
+                                 <div class="absolute -inset-px rounded-md pointer-events-none" aria-hidden="true">
+                                 </div>
+                              </label>
+
+                              <!-- Active: "ring-2 ring-indigo-500" -->
+                              <label
+                                 class="group relative border rounded-md py-3 px-4 flex items-center justify-center text-sm font-medium uppercase hover:bg-gray-50 focus:outline-none sm:flex-1 sm:py-6 bg-white shadow-sm text-gray-900 cursor-pointer size-button">
+                                 <input type="radio" name="size-choice" value="S" class="sr-only"
+                                    aria-labelledby="size-choice-2-label">
+                                 <p id="size-choice-2-label">S</p>
+
+                                 <!--
+                    Active: "border", Not Active: "border-2"
+                    Checked: "border-indigo-500", Not Checked: "border-transparent"
+                  -->
+                                 <div class="absolute -inset-px rounded-md pointer-events-none" aria-hidden="true">
+                                 </div>
+                              </label>
+
+                              <!-- Active: "ring-2 ring-indigo-500" -->
+                              <label
+                                 class="group relative border rounded-md py-3 px-4 flex items-center justify-center text-sm font-medium uppercase hover:bg-gray-50 focus:outline-none sm:flex-1 sm:py-6 bg-white shadow-sm text-gray-900 cursor-pointer size-button">
+                                 <input type="radio" name="size-choice" value="M" class="sr-only"
+                                    aria-labelledby="size-choice-3-label">
+                                 <p id="size-choice-3-label">M</p>
+
+                                 <!--
+                    Active: "border", Not Active: "border-2"
+                    Checked: "border-indigo-500", Not Checked: "border-transparent"
+                  -->
+                                 <div class="absolute -inset-px rounded-md pointer-events-none" aria-hidden="true">
+                                 </div>
+                              </label>
+
+                              <!-- Active: "ring-2 ring-indigo-500" -->
+                              <label
+                                 class="group relative border rounded-md py-3 px-4 flex items-center justify-center text-sm font-medium uppercase hover:bg-gray-50 focus:outline-none sm:flex-1 sm:py-6 bg-white shadow-sm text-gray-900 cursor-pointer size-button">
+                                 <input type="radio" name="size-choice" value="L" class="sr-only"
+                                    aria-labelledby="size-choice-4-label">
+                                 <p id="size-choice-4-label">L</p>
+
+                                 <!--
+                    Active: "border", Not Active: "border-2"
+                    Checked: "border-indigo-500", Not Checked: "border-transparent"
+                  -->
+                                 <div class="absolute -inset-px rounded-md pointer-events-none" aria-hidden="true">
+                                 </div>
+                              </label>
+
+                              <!-- Active: "ring-2 ring-indigo-500" -->
+                              <label
+                                 class="group relative border rounded-md py-3 px-4 flex items-center justify-center text-sm font-medium uppercase hover:bg-gray-50 focus:outline-none sm:flex-1 sm:py-6 bg-white shadow-sm text-gray-900 cursor-pointer size-button">
+                                 <input type="radio" name="size-choice" value="XL" class="sr-only"
+                                    aria-labelledby="size-choice-5-label">
+                                 <p id="size-choice-5-label">XL</p>
+
+                                 <!--
+                    Active: "border", Not Active: "border-2"
+                    Checked: "border-indigo-500", Not Checked: "border-transparent"
+                  -->
+                                 <div class="absolute -inset-px rounded-md pointer-events-none" aria-hidden="true">
+                                 </div>
+                              </label>
+
+                              <!-- Active: "ring-2 ring-indigo-500" -->
+                              <label
+                                 class="group relative border rounded-md py-3 px-4 flex items-center justify-center text-sm font-medium uppercase hover:bg-gray-50 focus:outline-none sm:flex-1 sm:py-6 bg-white shadow-sm text-gray-900 cursor-pointer size-button">
+                                 <input type="radio" name="size-choice" value="2XL" class="sr-only"
+                                    aria-labelledby="size-choice-6-label">
+                                 <p id="size-choice-6-label">2XL</p>
+
+                                 <!--
+                    Active: "border", Not Active: "border-2"
+                    Checked: "border-indigo-500", Not Checked: "border-transparent"
+                  -->
+                                 <div class="absolute -inset-px rounded-md pointer-events-none" aria-hidden="true">
+                                 </div>
+                              </label>
+
+                              <!-- Active: "ring-2 ring-indigo-500" -->
+                              <label
+                                 class="group relative border rounded-md py-3 px-4 flex items-center justify-center text-sm font-medium uppercase hover:bg-gray-50 focus:outline-none sm:flex-1 sm:py-6 bg-white shadow-sm text-gray-900 cursor-pointer size-button">
+                                 <input type="radio" name="size-choice" value="3XL" class="sr-only"
+                                    aria-labelledby="size-choice-7-label">
+                                 <p id="size-choice-7-label">3XL</p>
+
+                                 <!--
+                    Active: "border", Not Active: "border-2"
+                    Checked: "border-indigo-500", Not Checked: "border-transparent"
+                  -->
+                                 <div class="absolute -inset-px rounded-md pointer-events-none" aria-hidden="true">
+                                 </div>
+                              </label>
+                           </div>
+                        </fieldset>
+                     </div>
+
+                     <div class=" h-auto flex justify-between items-center mt-10">
+
+                        <div class="  h-auto flex justify-start items-center border border-[#666] rounded">
+                           <input type="number" value="8"
+                              class="w-[80px] h-full text-center py-[10px] px-2 outline-none text-[22px] producat-number">
+                           <div class=" flex flex-col " style="border-left: 1px solid #666;">
+                              <button class=" text-[25px]   p-[3px] incriment" type="button">
+                                 <img class="w-[80px] h-[18px]" src="{% static 'Assets/Icon/icons_plus.svg' %}" alt="">
+                              </button>
+                              <span class="w-full h-[1px] bg-[#666]"></span>
+                              <button class="  text-[25px]  p-[3px] decriment" type="button">
+                                 <img class="w-[80px] h-[18px]" src="{% static 'Assets/Icon/icons_minus.svg' %}" alt="">
+                              </button>
+                           </div>
+                        </div>
+
+
+                        <div class="w-full pl-[15px]">
+                           <button type="submit"
+                              class="w-full bg-[#111] border border-transparent rounded-md py-3 px-8 flex items-center justify-center text-base font-medium text-white hover:bg-[#333] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#888]">Add
+                              to bag</button>
+                        </div>
+
+                     </div>
+
+                  </form>
+               </div>
+
+
+            </div>
+
+            <div class="w-full h-auto">
+               <h1 class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">{{Producat_data.title}}
+               </h1>
+               <div class="w-full h-auto flex justify-start items-start sm:flex-row flex-col pt-[15px]">
+
+                  <div class="w-auto h-auto pr-[15px] text-[17px] pb-[5px]">
+                     <span>Availability: </span>
+
+                     {% if Producat_data.is_stock %}
+                     <b> In Stock</b>
+                     {% else %}
+                     <b> Stock out</b>
+                     {% endif %}
+
+                  </div>
+                  <div class="w-auto h-auto pr-[15px] text-[17px]   pb-[5px]">
+                     <span>Category: </span> <b>{{Producat_data.producat_catagory}}</b>
+                  </div>
+               </div>
+               <div class="py-10 lg:pt-6 lg:pb-16 lg:col-start-1 lg:col-span-2 lg:border-r lg:border-gray-200 lg:pr-8">
+                  <!-- Description and details -->
+                  <div>
+                     <h3 class="sr-only">Description</h3>
+
+                     <div class="space-y-6">
+                        <p class="text-[18px] text-gray-900">{{Producat_data.deprition}}
+                     </div>
+                  </div>
+
+               </div>
+            </div>
+         </div>
+
+
+         <div class="w-full h-auto">
+
+
+            <div class="w-full h-auto text-center">
+               <h1 class="text-[35px] text-[#111] font-semibold pb-[15px]">
+                  Related Producat
+               </h1>
+            </div>
+
+
+
+
+            <div class="slider-section">
+               <div class="relative overflow-hidden m-0">
+                  <ol class="new-producat-add cards slider font-normal whitespace-nowrap list-none">
+
+
+                     {% for producat in all_Producat_data %}
+
+                     <li class="w-[300px] pr-[10px] inline-block" style="width:300px">
+                        <a href='{% url "single_producat" producat.id %}'
+                           class="w-full h-auto relative flex flex-col border rounded-md shadow-md hover:shadow-xl">
+                           <div class="w-full h-auto">
+                              <div class="w-full h-auto absolute top-0 p-[20px] flex justify-between">
+                                 <span
+                                    class="w-auto h-auto px-[6px] py-[3px] bg-[#111] inline-block text-white rounded shadow-md">-40%</span>
+                                 <div>
+                                    <img class="w-[24px] h-[24px]" src="{% static 'Assets/Icon/heart icon.svg' %}"
+                                       alt="heart icon" />
+                                 </div>
+                              </div>
+
+                              <div class="w-full h-auto">
+                                 <img class="w-full h-[330px] rounded-md"
+                                    src='{{MEDIA_URL}}{{producat.produca_image_1}}' alt="Producat" />
+                              </div>
+                           </div>
+                           <div class="w-full h-auto p-[10px] text-center">
+                              <p class="text-[18px] text-[#111] text-center  capitalize text-ellipsis overflow-hidden">
+                                 {{producat.title}}
+                              </p>
+                              <div class="w-full h-auto  justify-center p-2 align item-center-middle">
+                                 <div class="text-[#111] text-[19px]">{{producat.price}}$
+                                 </div>
+
+                              </div>
+                              <div class="w-full h-auto">
+                                 <button
+                                    class=" h-auto px-[7px] py-[7px] bg-[#111] text-white text-[16px] rounded-md shadow-md border border-[#111]"
+                                    style="width:120px;margin-top:5px;">
+                                    Select options
+                                 </button>
+                                 <button
+                                    class=" h-auto px-[7px] py-[7px] text-[#111] bg-white text-[16px] rounded-md shadow-md border border-[#111]"
+                                    style="width:120px;">
+                                    Add to cart
+                                 </button>
+                              </div>
+                           </div>
+                        </a>
+                     </li>
+
+                     {% endfor %}
+
+
+                  </ol>
+                  <!-- <div
+                     class="js-slider-arrow flex justify-center align-middle absolute top-1/2 left-1 z-10 rounded-md p-[20px] bg-[#fff] border-2 cursor-pointer shadow-lg left slider-arrow item-center">
+                  </div>
+      
+                  <div
+                     class="js-slider-arrow flex justify-center align-middle absolute top-1/2 right-1 z-10 rounded-md p-[20px] bg-[#fff] border-2 cursor-pointer shadow-lg right slider-arrow item-center">
+      
+                  </div> -->
+               </div>
+            </div>
+
+
+
+         </div>
+
+      </div>
+   </section>
+
+   <!-- producat deatils end -->
+
+
+</main>
+<!-- main content end -->
+
+
+{% endblock main %}

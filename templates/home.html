@@ -1,0 +1,1191 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block title %}
+Home
+{% endblock title %}
+
+
+{% block main %}
+
+
+<!-- loding section start  -->
+
+<section class="w-full h-full loding-animation-root-section">
+   <div class="loding-animation">
+      <img src="{% static 'Assets/Icon/preloader.gif' %}" alt="loder">
+   </div>
+</section>
+
+<!-- loding section end -->
+
+<!-- content slider and catagory start -->
+<section class="w-full h-auto">
+   <div class="max-w-[1340px] m-auto flex justify-between px-[20px]">
+      <!-- left side catagory list bar start -->
+      <div class="lg:block min-w-[300px] hidden">
+         <div
+            class="bg-[#111] text-white flex justify-start align-middle p-[15px] pl-[28px] rounded-t cursor-pointer item-center">
+            <span class="w-[30px] h-full">
+               <img class="w-[30px] h-[18px]" src="{% static 'Assets/Icon/menubar.png' %}" alt="menubar" />
+            </span>
+            <span class="text-[22px] font-medium pl-[12px]">CATEGORIES</span>
+         </div>
+         <ul>
+            <li
+               class="hover:bg-[#EEEEEE] bg-[#f9f9f9] transition duration-250 ease-linear hover:ease-linear border-t-[1px] hover:shadow-md">
+               <a href="/Html/shops.html" class="flex justify-start align-middle px-[20px] pl-[26px] py-[12.3px]">
+                  <span>
+                     <img class="w-[35px]" src="{% static 'Assets/Icon/Men.svg' %}" alt="Man Icon" />
+                  </span>
+                  <span class="w-full text-[17px] pl-[15px] text-[#292929]">Man</span>
+               </a>
+            </li>
+
+            <li
+               class="hover:bg-[#EEEEEE] bg-[#f9f9f9] transition duration-250 ease-linear hover:ease-linear border-t-[1px] hover:shadow-md item-center">
+               <a href="/Html/shops.html"
+                  class="w-full flex justify-start align-middle px-[20px] pl-[26px] py-[12.3px]">
+                  <span>
+                     <img class="w-[35px]" src="{% static 'Assets/Icon/Women.svg' %}" alt="Women Icon" />
+                  </span>
+                  <span class="w-full text-[17px] pl-[15px] text-[#292929]">Women</span>
+               </a>
+            </li>
+
+            <li
+               class="hover:bg-[#EEEEEE] bg-[#f9f9f9] transition duration-250 ease-linear hover:ease-linear border-t-[1px] hover:shadow-md">
+               <a href="/Html/shops.html" class="flex justify-start align-middle px-[20px] pl-[26px] py-[12.3px]">
+                  <span>
+                     <img class="w-[35px]" src="{% static 'Assets/Icon/Electornics.svg' %}" alt="Electornics Icon" />
+                  </span>
+                  <span class="w-full text-[17px] pl-[15px] text-[#292929]">Electornics</span>
+               </a>
+            </li>
+
+            <li
+               class="hover:bg-[#EEEEEE] bg-[#f9f9f9] transition duration-250 ease-linear hover:ease-linear border-t-[1px] hover:shadow-md">
+               <a href="/Html/shops.html" class="flex justify-start align-middle px-[20px] pl-[26px] py-[12.3px]">
+                  <span>
+                     <img class="w-[35px]" src="{% static 'Assets/Icon/Jewellery.svg' %}" alt="Jewellery Icon" />
+                  </span>
+                  <span class="w-full text-[17px] pl-[15px] text-[#292929]">Jewellery</span>
+               </a>
+            </li>
+
+            <li
+               class="hover:bg-[#EEEEEE] bg-[#f9f9f9] transition duration-250 ease-linear hover:ease-linear border-t-[1px] hover:shadow-md">
+               <a href="/Html/shops.html" class="flex justify-start align-middle px-[20px] pl-[26px] py-[12.3px]">
+                  <span>
+                     <img class="w-[35px]" src="{% static 'Assets/Icon/Shoes.svg' %}" alt="Shoes Icon" />
+                  </span>
+                  <span class="w-full text-[17px] pl-[15px] text-[#292929]">Shoes</span>
+               </a>
+            </li>
+
+            <li
+               class="hover:bg-[#EEEEEE] bg-[#f9f9f9] transition duration-250 ease-linear hover:ease-linear border-t-[1px] hover:shadow-md">
+               <a href="/Html/shops.html" class="flex justify-start align-middle px-[20px] pl-[26px] py-[12.3px]">
+                  <span>
+                     <img class="w-[35px]" src="{% static 'Assets/Icon/Kid’s Wear.svg' %}" alt="Kid’s Wear Icon" />
+                  </span>
+                  <span class="w-full text-[17px] pl-[15px] text-[#292929]">Kid’s Wear</span>
+               </a>
+            </li>
+
+            <li
+               class="hover:bg-[#EEEEEE] bg-[#f9f9f9] transition duration-250 ease-linear hover:ease-linear border-t-[1px] hover:shadow-md">
+               <a href="/Html/shops.html" class="flex justify-start align-middle px-[20px] pl-[26px] py-[12.3px]">
+                  <span>
+                     <img class="w-[35px]" src="{% static 'Assets/Icon/Sports.svg' %}" alt="Sports Icon" />
+                  </span>
+                  <span class="w-full text-[17px] pl-[15px] text-[#292929]">Sports</span>
+               </a>
+            </li>
+
+            <li
+               class="hover:bg-[#EEEEEE] bg-[#f9f9f9] transition duration-250 ease-linear border-t-[1px] hover:ease-linear hover:shadow-md">
+               <a href="/Html/shops.html" class="flex justify-start align-middle px-[20px] pl-[26px] py-[12.3px]">
+                  <span>
+                     <img class="w-[35px]" src="{% static 'Assets/Icon/Toys.svg' %}" alt="Toys Icon" />
+                  </span>
+                  <span class="w-full text-[17px] pl-[15px] text-[#292929]">Toys</span>
+               </a>
+            </li>
+
+            <li
+               class="hover:bg-[#EEEEEE] bg-[#f9f9f9] transition duration-250 ease-linear hover:ease-linear border-t-[1px] hover:shadow-md">
+               <a href="/Html/shops.html" class="flex justify-start align-middle px-[20px] pl-[26px] py-[12.3px]">
+                  <span>
+                     <img class="w-[35px]" src="{% static 'Assets/Icon/Gift Corners.svg' %}" alt="Gift Corners Icon" />
+                  </span>
+                  <span class="w-full text-[17px] pl-[15px] text-[#292929]">Gift Corners</span>
+               </a>
+            </li>
+         </ul>
+      </div>
+      <!-- left side catagory list bar end -->
+
+      <!-- right side slider start  -->
+      <div class="lg:pl-[15px] flex flex-col min-w-[320px] md:max-w-[1000px]">
+         <!-- search div start  -->
+         <div class="w-[100%] h-auto flex justify-start border-[1.5px] align-middle rounded mb-3 item-center">
+            <!-- input search box start -->
+            <div class="w-full h-full flex align-middle">
+               <input class="w-full p-[8px] px-[20px] outline-none border-none" type="text"
+                  placeholder="Search Products Here" />
+            </div>
+            <!-- input search box end -->
+
+            <!-- row liner start  -->
+            <div class="w-[1px] bg-[#666666] h-7"></div>
+            <!-- row liner end  -->
+
+            <!-- catagory start  -->
+            <div class="w-[270px] md:w-[210px] relative px-[20px]">
+               <div class="w-full flex justify-between align-middle cursor item-center-pointer">
+                  <span class="all-categories-button">All Categories</span>
+                  <span>
+                     <img class="w-[16px] all-categories-button" src="{% static 'Assets/Icon/arrow-down-button.svg' %}"
+                        alt="Arrow Down Button" />
+                  </span>
+               </div>
+               <ul
+                  class="all-categories w-[280px] absolute top-[40px] left-[-130px] bg-white z-40 shadow-md border rounded-md hidden">
+
+
+                  <li
+                     class="hover:bg-[#EEEEEE] bg-[#f9f9f9] transition duration-250 ease-linear hover:ease-linear border-t-[1px] hover:shadow-md">
+                     <a href="/Html/shops.html" class="flex justify-start align-middle px-[20px] pl-[26px] py-[12.3px]">
+                        <span>
+                           <img class="w-[35px]" src="{% static 'Assets/Icon/Men.svg' %}" alt="Man Icon" />
+                        </span>
+                        <span class="w-full text-[17px] pl-[15px] text-[#292929]">Man</span>
+                     </a>
+                  </li>
+
+                  <li
+                     class="hover:bg-[#EEEEEE] bg-[#f9f9f9] transition duration-250 ease-linear hover:ease-linear border-t-[1px] hover:shadow-md item-center">
+                     <a href="/Html/shops.html"
+                        class="w-full flex justify-start align-middle px-[20px] pl-[26px] py-[12.3px]">
+                        <span>
+                           <img class="w-[35px]" src="{% static 'Assets/Icon/Women.svg' %}" alt="Women Icon" />
+                        </span>
+                        <span class="w-full text-[17px] pl-[15px] text-[#292929]">Women</span>
+                     </a>
+                  </li>
+
+                  <li
+                     class="hover:bg-[#EEEEEE] bg-[#f9f9f9] transition duration-250 ease-linear hover:ease-linear border-t-[1px] hover:shadow-md">
+                     <a href="/Html/shops.html" class="flex justify-start align-middle px-[20px] pl-[26px] py-[12.3px]">
+                        <span>
+                           <img class="w-[35px]" src="{% static 'Assets/Icon/Electornics.svg' %}"
+                              alt="Electornics Icon" />
+                        </span>
+                        <span class="w-full text-[17px] pl-[15px] text-[#292929]">Electornics</span>
+                     </a>
+                  </li>
+
+                  <li
+                     class="hover:bg-[#EEEEEE] bg-[#f9f9f9] transition duration-250 ease-linear hover:ease-linear border-t-[1px] hover:shadow-md">
+                     <a href="/Html/shops.html" class="flex justify-start align-middle px-[20px] pl-[26px] py-[12.3px]">
+                        <span>
+                           <img class="w-[35px]" src="{% static 'Assets/Icon/Jewellery.svg' %}" alt="Jewellery Icon" />
+                        </span>
+                        <span class="w-full text-[17px] pl-[15px] text-[#292929]">Jewellery</span>
+                     </a>
+                  </li>
+
+                  <li
+                     class="hover:bg-[#EEEEEE] bg-[#f9f9f9] transition duration-250 ease-linear hover:ease-linear border-t-[1px] hover:shadow-md">
+                     <a href="/Html/shops.html" class="flex justify-start align-middle px-[20px] pl-[26px] py-[12.3px]">
+                        <span>
+                           <img class="w-[35px]" src="{% static 'Assets/Icon/Shoes.svg' %}" alt="Shoes Icon" />
+                        </span>
+                        <span class="w-full text-[17px] pl-[15px] text-[#292929]">Shoes</span>
+                     </a>
+                  </li>
+
+                  <li
+                     class="hover:bg-[#EEEEEE] bg-[#f9f9f9] transition duration-250 ease-linear hover:ease-linear border-t-[1px] hover:shadow-md">
+                     <a href="/Html/shops.html" class="flex justify-start align-middle px-[20px] pl-[26px] py-[12.3px]">
+                        <span>
+                           <img class="w-[35px]" src="{% static 'Assets/Icon/Kid’s Wear.svg' %}"
+                              alt="Kid’s Wear Icon" />
+                        </span>
+                        <span class="w-full text-[17px] pl-[15px] text-[#292929]">Kid’s Wear</span>
+                     </a>
+                  </li>
+
+                  <li
+                     class="hover:bg-[#EEEEEE] bg-[#f9f9f9] transition duration-250 ease-linear hover:ease-linear border-t-[1px] hover:shadow-md">
+                     <a href="/Html/shops.html" class="flex justify-start align-middle px-[20px] pl-[26px] py-[12.3px]">
+                        <span>
+                           <img class="w-[35px]" src="{% static 'Assets/Icon/Sports.svg' %}" alt="Sports Icon" />
+                        </span>
+                        <span class="w-full text-[17px] pl-[15px] text-[#292929]">Sports</span>
+                     </a>
+                  </li>
+
+                  <li
+                     class="hover:bg-[#EEEEEE] bg-[#f9f9f9] transition duration-250 ease-linear border-t-[1px] hover:ease-linear hover:shadow-md">
+                     <a href="/Html/shops.html" class="flex justify-start align-middle px-[20px] pl-[26px] py-[12.3px]">
+                        <span>
+                           <img class="w-[35px]" src="{% static 'Assets/Icon/Toys.svg' %}" alt="Toys Icon" />
+                        </span>
+                        <span class="w-full text-[17px] pl-[15px] text-[#292929]">Toys</span>
+                     </a>
+                  </li>
+
+                  <li
+                     class="hover:bg-[#EEEEEE] bg-[#f9f9f9] transition duration-250 ease-linear hover:ease-linear border-t-[1px] hover:shadow-md">
+                     <a href="/Html/shops.html" class="flex justify-start align-middle px-[20px] pl-[26px] py-[12.3px]">
+                        <span>
+                           <img class="w-[35px]" src="{% static 'Assets/Icon/Gift Corners.svg' %}"
+                              alt="Gift Corners Icon" />
+                        </span>
+                        <span class="w-full text-[17px] pl-[15px] text-[#292929]">Gift Corners</span>
+                     </a>
+                  </li>
+
+               </ul>
+            </div>
+            <!-- catagory end  -->
+
+            <!-- search icon start  -->
+            <div class="w-[70px] h-auto bg-black flex justify-center align-middle px-[10px] py-[15px] rounded-r">
+               <img class="w-[30px]" src="{% static 'Assets/Icon/white-search-icon.svg' %}" alt="Search" />
+            </div>
+            <!-- search icon end  -->
+         </div>
+         <!-- search div end  -->
+
+         <div class="w-full h-full">
+            <div id="carouselDarkVariant" class="carousel slide carousel-fade carousel-dark relative"
+               data-bs-ride="carousel">
+               <!-- Inner -->
+               <div class="carousel-inner relative w-full overflow-hidden">
+                  <!-- Single item -->
+                  <div class="carousel-item active relative float-left w-full">
+                     <img src="{% static 'Assets/Image/slide1.png' %}" class="block w-full h-full lg:h-[495px]"
+                        alt="Motorbike Smoke" />
+                     <div class="carousel-caption hidden md:block absolute text-center">
+                        <h5 class="text-xl">First slide label</h5>
+                        <p>
+                           Some representative placeholder content for the first
+                           slide.
+                        </p>
+                     </div>
+                  </div>
+
+                  <!-- Single item -->
+                  <div class="carousel-item relative float-left w-full">
+                     <img src="{% static 'Assets/Image/slide2.png' %}" class="block w-full h-full lg:h-[495px]"
+                        alt="Mountaintop" />
+                     <div class="carousel-caption hidden md:block absolute text-center">
+                        <h5 class="text-xl">Second slide label</h5>
+                        <p>
+                           Some representative placeholder content for the second
+                           slide.
+                        </p>
+                     </div>
+                  </div>
+
+                  <!-- Single item -->
+                  <div class="carousel-item relative float-left w-full">
+                     <img src="{% static 'Assets/Image/slide3.png' %}" class="block w-full h-full lg:h-[495px]"
+                        alt="Woman Reading a Book" />
+                     <div class="carousel-caption hidden md:block absolute text-center">
+                        <h5 class="text-xl">Third slide label</h5>
+                        <p>
+                           Some representative placeholder content for the third
+                           slide.
+                        </p>
+                     </div>
+                  </div>
+               </div>
+               <!-- Inner -->
+
+               <!-- Controls -->
+               <button
+                  class="carousel-control-prev absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline left-0"
+                  type="button" data-bs-target="#carouselDarkVariant" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon inline-block hover:bg-white bg-black rounded-md shadow-md"
+                     aria-hidden="true"></span>
+               </button>
+               <button
+                  class="carousel-control-next absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline right-0"
+                  type="button" data-bs-target="#carouselDarkVariant" data-bs-slide="next">
+                  <span class="carousel-control-next-icon inline-block hover:bg-white bg-black rounded-md shadow-md"
+                     aria-hidden="true"></span>
+               </button>
+            </div>
+         </div>
+      </div>
+      <!-- right side slider end  -->
+   </div>
+</section>
+<!-- content slider and catagory end -->
+
+<!-- support section start  -->
+<section class="w-full h-auto">
+   <div class="max-w-[1340px] m-auto block sm:flex justify-between px-[20px] py-[40px]">
+      <div class="service-card w-full bg-[#fcfcfc] sm:mr-[15px] shadow hoverShadow p-[20px] cursor-pointer">
+         <div class="w-full xl:flex align-middle justify-start item-center">
+            <span class="w-[120px] px-[20px] py-[10px] flex justify-center align-middle m-auto xl:m-0 xl:block">
+               <img class="w-[60px] h-auto block" src="{% static 'Assets/Icon/delivery icon.svg' %}"
+                  alt="delivery icon" />
+               <img class="w-[60px] h-auto hidden" src="{% static 'Assets/Icon/delivery icon black.svg' %}"
+                  alt="delivery icon" />
+            </span>
+            <span class="w-[1px] bg-[#999999] h-[60px] hidden xl:inline-block"></span>
+            <span class="w-full xl:w-auto xl:pl-[20px] h-auto block xl:text-left text-center py-[15px] xl:py-0">
+               <span class="w-full text-[22px] font-medium text-[#555] text-center xl:text-left">FREE
+                  SHIPPING</span>
+               <p class="text-[15px] text-[#adadad] text-center xl:text-left">
+                  On All Orders
+               </p>
+            </span>
+         </div>
+      </div>
+
+      <div
+         class="service-card w-full bg-[#fcfcfc] sm:mr-[7.5px] my-[25px] sm:my-0 sm:ml-[7.5px] shadow hoverShadow p-[20px] cursor-pointer">
+         <div class="w-full xl:flex align-middle justify item-center-start">
+            <span class="w-[120px] px-[20px] py-[10px] flex justify-center align-middle m-auto xl:m-0 xl:block">
+               <img class="w-[60px] h-auto block" src="{% static 'Assets/Icon/support icon.svg' %}"
+                  alt="support icon" />
+               <img class="w-[60px] h-auto hidden" src="{% static 'Assets/Icon/support icon black.svg' %}"
+                  alt="support icon" />
+            </span>
+            <span class="w-[1px] bg-[#999999] h-[60px] hidden xl:inline-block"></span>
+            <span class="w-full xl:w-auto xl:pl-[20px] h-auto block xl:text-left text-center py-[15px] xl:py-0">
+               <span class="w-full text-[22px] font-medium text-[#555] text-center xl:text-left">24/7
+                  SUPPORT</span>
+               <p class="text-[15px] text-[#adadad] text-center xl:text-left">
+                  Get Help When You Need
+               </p>
+            </span>
+         </div>
+      </div>
+
+      <div class="service-card w-full bg-[#f8f8f8] sm:ml-[15px] shadow hoverShadow p-[20px] cursor-pointer">
+         <div class="w-full xl:flex align-middle justify item-center-start">
+            <span class="w-[120px] px-[20px] py-[10px] flex justify-center align-middle m-auto xl:m-0 xl:block">
+               <img class="w-[60px] h-auto block" src="{% static 'Assets/Icon/like icon.svg' %}" alt="like icon" />
+               <img class="w-[60px] h-auto hidden" src="{% static 'Assets/Icon/like icon black.svg' %}"
+                  alt="like icon" />
+            </span>
+            <span class="w-[1px] bg-[#999999] h-[60px] hidden xl:inline-block"></span>
+            <span class="w-full xl:w-auto xl:pl-[20px] h-auto block xl:text-left text-center py-[15px] xl:py-0">
+               <span class="w-full text-[22px] font-medium text-[#555] text-center xl:text-left">100%
+                  RETURN</span>
+               <p class="text-[15px] text-[#adadad] text-center xl:text-left">
+                  Within 30 Days
+               </p>
+            </span>
+         </div>
+      </div>
+   </div>
+</section>
+<!-- support section start  -->
+
+<!-- propuler producat section start -->
+<section class="w-full h-auto">
+   <div
+      class="max-w-[1340px] h-auto m-auto pt-[10px] pb-[30px] px-[20px] xl:flex justify-between align-middle item-center">
+      <div class="w-full h-full xl:pr-[10px] py-[20px]">
+         <div
+            class="collection-card1 w-full xl:w-[580px] h-full relative pt-[20px] md:pt-[40px] xl:pt-[20px] shadow cursor-pointer">
+            <div class="w-full h-auto flex justify-end align-middle ml-[-3%]">
+               <div
+                  class="xl:w-[350px] xl:h-[416px] sm:w-[250px] sm:h-[260px] md:w-[350px] md:h-[400px] w-[180px] h-[200px] flex justify-center overflow-hidden"
+                  style="align-items: end">
+                  <img
+                     class="xl:w-[300px] w-[160px] h-[200px] xl:h-auto sm:w-[250px] sm:h-[260px] md:w-[340px] md:h-[400px]"
+                     src="{% static 'Assets/Image/product11.png' %}" alt="product" />
+               </div>
+            </div>
+            <div class="absolute xl:top-[78%] top-[65%] left-[5%]">
+               <h1 class="md:text-[40px] text-[22px] xl:text-[22px] font-semibold">
+                  MAN'S
+               </h1>
+               <p class="md:text-[30px] text-[20px] xl:text-[20px]">
+                  Collection 2019
+               </p>
+            </div>
+         </div>
+      </div>
+
+      <div class="w-full h-auto xl:p-[10px] p-[0px] py-0 xl:block md:flex">
+         <div class="w-full h-auto pb-[20px] xl:pr-0 md:pr-[10px] cursor-pointer">
+            <div class="collection-card2 w-full h-auto relative pt-[20px] shadow">
+               <div class="w-full h-auto flex justify-end align-middle ml-[-3%] overflow-hidden">
+                  <img class="w-auto h-[190px]" src="{% static 'Assets/Image/product11.png' %}" alt="product" />
+               </div>
+               <div class="absolute top-[60%] left-[5%]">
+                  <h1 class="text-[22px] font-semibold">WOMAN'S</h1>
+                  <p class="text-[20px]">Collection 2019</p>
+               </div>
+            </div>
+         </div>
+
+         <div class="w-full h-auto pb-[20px] md:pb-[20px] xl:pb-[0px] xl:pl-0 md:pl-[10px] cursor-pointer">
+            <div class="collection-card4 w-full h-auto relative pt-[20px] shadow">
+               <div class="w-full h-auto flex justify-end align-middle ml-[-3%] overflow-hidden">
+                  <img class="w-auto h-[190px]" src="{% static 'Assets/Image/product11.png' %}" alt="product" />
+               </div>
+               <div class="absolute top-[60%] left-[5%]">
+                  <h1 class="text-[22px] font-semibold">BAGPACK</h1>
+                  <p class="text-[20px]">2019 Trend</p>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div class="w-full h-auto xl:p-[10px] py-0 xl:pr-0 xl:block md:flex">
+         <div class="w-full h-auto pb-[20px] xl:pr-0 md:pr-[10px] cursor-pointer">
+            <div class="collection-card3 w-full h-auto relative pt-[20px] shadow">
+               <div class="w-full h-auto flex justify-end align-middle ml-[-3%] overflow-hidden">
+                  <img class="w-auto h-[190px]" src="{% static 'Assets/Image/product11.png' %}" alt="product" />
+               </div>
+               <div class="absolute top-[60%] left-[5%]">
+                  <h1 class="text-[22px] font-semibold">JEWELLERY</h1>
+                  <p class="text-[20px]">Collection 2019</p>
+               </div>
+            </div>
+         </div>
+
+         <div class="w-full h-auto xl:pl-0 md:pl-[10px] cursor-pointer">
+            <div class="collection-card5 w-full h-auto relative pt-[20px] shadow">
+               <div class="w-full h-auto flex justify-end align-middle ml-[-3%] overflow-hidden">
+                  <img class="w-auto h-[190px]" src="{% static 'Assets/Image/product11.png' %}" alt="product" />
+               </div>
+               <div class="absolute top-[60%] left-[5%]">
+                  <h1 class="text-[22px] font-semibold">ACCESSORIES</h1>
+                  <p class="text-[20px]">Collection</p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+<!-- propuler producat section end -->
+
+
+<!-- New  slider section start  -->
+<section class="w-full h-auto">
+   <div class="max-w-[1340px] m-auto py-[30px] px-[20px]">
+      <div class="w-full h-auto py-[25px] flex justify-between align-top">
+         <div class="max-w-[230px] h-auto flex flex-col">
+            <div class="text-[28px] font-semibold pb-[10px] text-[#111]">
+               New Products
+            </div>
+            <span class="w-[80px] h-[4px] rounded-md inline-block bg-[#111]"></span>
+         </div>
+
+         <a href="#" class="max-w-[80px] h-auto flex justify item-center-between">
+            <span class="text-[#666] cursor-pointer">View All</span>
+            <span class="pl-[5px]">
+               <img class="w-[7px] cursor-pointer" src="{% static 'Assets/Icon/black-right-arrow-icon.svg' %}"
+                  alt="black-right-arrow-icon" />
+            </span>
+         </a>
+      </div>
+      <div class="slider-section">
+         <div class="relative overflow-hidden m-0">
+            <ol class="new-producat-add cards slider font-normal whitespace-nowrap list-none">
+
+
+               {% for new_producat in new_all_Producat_data %}
+
+               <li class="w-[300px] pr-[10px] inline-block" style="width:300px">
+                  <a href='{% url "single_producat" new_producat.id %}'
+                     class="w-full h-auto relative flex flex-col border rounded-md shadow-md hover:shadow-xl">
+                     <div class="w-full h-auto">
+                        <div class="w-full h-auto absolute top-0 p-[20px] flex justify-between">
+                           <span
+                              class="w-auto h-auto px-[6px] py-[3px] bg-[#111] inline-block text-white rounded shadow-md">-40%</span>
+                           <div>
+                              <img class="w-[24px] h-[24px]" src="{% static 'Assets/Icon/heart icon.svg' %}"
+                                 alt="heart icon" />
+                           </div>
+                        </div>
+
+                        <div class="w-full h-auto">
+                           <img class="w-full h-[330px] rounded-md" src='media/{{new_producat.produca_image_1}}'
+                              alt="Producat" />
+                        </div>
+                     </div>
+                     <div class="w-full h-auto p-[10px] text-center">
+                        <p class="text-[18px] text-[#111] text-center  capitalize text-ellipsis overflow-hidden">
+                           {{new_producat.title}}
+                        </p>
+                        <div class="w-full h-auto  justify-center p-2 align item-center-middle">
+                           <div class="text-[#111] text-[19px]">{{new_producat.price}}$
+                           </div>
+                           
+                        </div>
+                        <div class="w-full h-auto">
+                           <button
+                              class=" h-auto px-[7px] py-[7px] bg-[#111] text-white text-[16px] rounded-md shadow-md border border-[#111]"
+                              style="width:120px;margin-top:5px;">
+                              Select options
+                           </button>
+                           <button
+                              class=" h-auto px-[7px] py-[7px] text-[#111] bg-white text-[16px] rounded-md shadow-md border border-[#111]"
+                              style="width:120px;">
+                              Add to cart
+                           </button>
+                        </div>
+                     </div>
+                  </a>
+               </li>
+
+               {% endfor %}
+
+
+            </ol>
+            <!-- <div
+               class="js-slider-arrow flex justify-center align-middle absolute top-1/2 left-1 z-10 rounded-md p-[20px] bg-[#fff] border-2 cursor-pointer shadow-lg left slider-arrow item-center">
+            </div>
+
+            <div
+               class="js-slider-arrow flex justify-center align-middle absolute top-1/2 right-1 z-10 rounded-md p-[20px] bg-[#fff] border-2 cursor-pointer shadow-lg right slider-arrow item-center">
+
+            </div> -->
+         </div>
+      </div>
+   </div>
+</section>
+<!-- New  slider section start  -->
+
+
+<!-- Popular Products slider start  -->
+<section class="w-full h-auto">
+   <div class="max-w-[1340px] m-auto py-[30px] px-[20px]">
+      <div class="w-full h-auto py-[25px] flex justify-between align-top">
+         <div class="max-w-[300px] h-auto flex flex-col">
+            <div class="text-[28px] font-semibold pb-[10px] text-[#111]">
+               Popular Products
+            </div>
+            <span class="w-[80px] h-[4px] rounded-md inline-block bg-[#111]"></span>
+         </div>
+
+         <a href="#" class="max-w-[80px] h-auto flex justify item-center-between">
+            <span class="text-[#666] cursor-pointer">View All</span>
+            <span class="pl-[5px]">
+               <img class="w-[7px] cursor-pointer" src="{% static 'Assets/Icon/black-right-arrow-icon.svg' %}"
+                  alt="black-right-arrow-icon" />
+            </span>
+         </a>
+      </div>
+      <div class="slider-section">
+         <div class="relative overflow-hidden m-0">
+            <ol class="new-producat-add cards slider font-normal whitespace-nowrap list-none">
+
+               {% for popular_producat in popular_all_Producat_data %}
+
+
+               <li class="w-[300px] pr-[10px] inline-block" style="width:300px">
+                  <a href='{% url "single_producat" popular_producat.id %}'
+                     class="w-full h-auto relative flex flex-col border rounded-md shadow-md hover:shadow-xl">
+                     <div class="w-full h-auto">
+                        <div class="w-full h-auto absolute top-0 p-[20px] flex justify-between">
+                           <span
+                              class="w-auto h-auto px-[6px] py-[3px] bg-[#111] inline-block text-white rounded shadow-md">-40%</span>
+                           <div>
+                              <img class="w-[24px] h-[24px]" src="{% static 'Assets/Icon/heart icon.svg' %}"
+                                 alt="heart icon" />
+                           </div>
+                        </div>
+
+                        <div class="w-full h-auto">
+                           <img class="w-full h-[330px] rounded-md" src='media/{{popular_producat.produca_image_1}}'
+                              alt="Producat" />
+                        </div>
+                     </div>
+                     <div class="w-full h-auto p-[10px] text-center">
+                        <div class="text-[18px] text-[#111] text-center">
+                           {{popular_producat.title}}
+                        </div>
+                        <div class="w-full h-auto flex justify-center p-3 align item-center-middle">
+                           <div class="text-[#111] text-[19px]">{{popular_producat.price}}</div>
+                           <div class="w-full h-auto" style="display: flex;
+                           flex-direction: row;
+                           flex-wrap: wrap-reverse;
+                           justify-content: end;
+                           align-items: center;
+                           align-content: center;">
+                              <button
+                                 class=" block h-auto px-[7px] py-[7px] bg-[#111] text-white text-[16px] rounded-md shadow-md border border-[#111]"
+                                 style="width:120px;margin-top:5px;">
+                                 Select options
+                              </button>
+                              <button
+                                 class=" block h-auto px-[7px] py-[7px] text-[#111] bg-white text-[16px] rounded-md shadow-md border border-[#111]"
+                                 style="width:120px;">
+                                 Add to cart
+                              </button>
+                           </div>
+                        </div>
+
+                     </div>
+                  </a>
+               </li>
+               {% endfor %}
+
+
+            </ol>
+            <!-- <div
+               class="js-slider-arrow flex justify-center align-middle absolute top-1/2 left-1 z-10 rounded-md p-[20px] bg-[#fff] border-2 cursor-pointer shadow-lg left slider-arrow item-center">
+            </div>
+
+            <div
+               class="js-slider-arrow flex justify-center align-middle absolute top-1/2 right-1 z-10 rounded-md p-[20px] bg-[#fff] border-2 cursor-pointer shadow-lg right slider-arrow item-center">
+
+            </div> -->
+         </div>
+      </div>
+   </div>
+</section>
+<!-- Popular Products slider end -->
+
+
+<!-- offer section start  -->
+<section class="w-ful h-auto my-[50px]"
+style="background-image: url('{% static "Assets/Bannar/banner2.png" %}');background-position: center;background-size: cover; background-repeat: no-repeat;background-attachment: fixed;">
+   <div class="max-w-[1340px] h-auto px-[20px] lg:pl-[40px] m-auto">
+      <div class="w-full h-auto flex justify-between align-middle items-center">
+
+         <!-- left site start  -->
+         <div class="w-full h-full py-[50px] lg:py-0">
+            <div>
+               <img class=" w-[380px] h-[180px]  sm:w-[500px]  sm:h-[250px] lg:w-[400px] lg:h-[200px] m-auto lg:m-0"
+                  src="{% static 'Assets/Bannar/banner1.png' %}" alt="banner2">
+            </div>
+            <div class="w-full h-auto pt-[45px] lg:block flex justify-center  ">
+               <button class="w-[140px] h-auto bg-[#111] hover:bg-[#666] text-white flex align-middle rounded"style="align-items:center;transition:all .3s;">
+                  <a href="#"
+                     class="w-full h-auto text-white flex justify-center align-middle rounded py-[13px] px-[10px]"style="align-items:center;">
+                     <span>BUY NOW</span>
+                     <span class="w-[16px] h-[15px] mt-[-3px]">
+                        <img class=" ml-[6px] w-[16px] h-[15px]"
+                           src="{% static 'Assets/Icon/white-right-arrow-icon.svg' %}" alt="right-arrow-icon">
+                     </span>
+                  </a>
+               </button>
+            </div>
+
+         </div>
+         <!-- left site end  -->
+
+         <!-- right site start  -->
+         <div class=" lg:block hidden w-full h-full">
+            <img class="w-auto h-auto" src="{% static 'Assets/Image/product66.png' %}" alt="product">
+         </div>
+         <!-- right site end -->
+
+      </div>
+   </div>
+</section>
+<!-- offer section end -->
+
+
+<!-- defarente producats start -->
+<section class="w-full h-auto">
+   <div class="max-w-[1340px] h-auto m-auto  py-[30px] px-[20px]">
+      <div class="w-full h-auto  md:flex justify-between ">
+         <!-- Best Seller start  -->
+         <div class="w-full h-auto pb-[20px]">
+
+            <div class="w-full h-auto pt-[20px] pb-[30px]">
+               <h1 class="text-[26px] text-[#111] font-semibold">Best Seller</h1>
+               <span class="block w-[50px] h-[3px] rounded-xl bg-[#111]"></span>
+            </div>
+
+
+            <div>
+
+               <ul>
+
+                  <li class="list-none w-full h-auto pb-[20px]">
+                     <div class="w-full h-auto flex justify-start align-middle">
+                        <a href="#" class="w-[120px] h-[100px] pr-[20px] rounded relative">
+                           <img class="w-[100px] h-[100px] rounded"
+                              src="{% static 'Assets/Image/Untitled-1-360x432.png' %}" alt="">
+                           <div
+                              class="w-[100px] h-[100px] bg-[#6666669c] flex justify-center  align-middle absolute top-0 rounded opacity-0 hover:opacity-100 items-center">
+                              <img class="w-[40px] h-[40px]" src="{% static 'Assets/Icon/plus-icon.svg' %}"
+                                 alt="plus-icon">
+                           </div>
+                        </a>
+                        <div>
+                           <a href="#">
+                              <h1 class="text-[22px] text-[#666] font-semibold">Teddy Bag</h1>
+                           </a>
+                           <span class=" py-[7px] block text-[18px] text-[#666]">Toys</span>
+                           <p class="text-[20px] font-semibold text-[#111]">$100.00</p>
+                        </div>
+                     </div>
+                  </li>
+
+                  <li class="list-none w-full h-auto pb-[20px]">
+                     <div class="w-full h-auto flex justify-start align-middle">
+                        <a href="#" class="w-[120px] h-[100px] pr-[20px] rounded relative">
+                           <img class="w-[100px] h-[100px] rounded"
+                              src="{% static 'Assets/Image/Untitled-1-360x432.png' %}" alt="">
+                           <div
+                              class="w-[100px] h-[100px] bg-[#6666669c] flex justify-center  align-middle absolute top-0 rounded opacity-0 hover:opacity-100 item-center">
+                              <img class="w-[40px] h-[40px]" src="{% static 'Assets/Icon/plus-icon.svg' %}"
+                                 alt="plus-icon">
+                           </div>
+                        </a>
+                        <div>
+                           <a href="#">
+                              <h1 class="text-[22px] text-[#666] font-semibold">Teddy Bag</h1>
+                           </a>
+                           <span class=" py-[7px] block text-[18px] text-[#666]">Toys</span>
+                           <p class="text-[20px] font-semibold text-[#111]">$100.00</p>
+                        </div>
+                     </div>
+                  </li>
+
+                  <li class="list-none w-full h-auto pb-[20px]">
+                     <div class="w-full h-auto flex justify-start align-middle">
+                        <a href="#" class="w-[120px] h-[100px] pr-[20px] rounded relative">
+                           <img class="w-[100px] h-[100px] rounded"
+                              src="{% static 'Assets/Image/Untitled-1-360x432.png' %}" alt="">
+                           <div
+                              class="w-[100px] h-[100px] bg-[#6666669c] flex justify-center  align-middle absolute top-0 rounded opacity-0 hover:opacity-100 item-center">
+                              <img class="w-[40px] h-[40px]" src="{% static 'Assets/Icon/plus-icon.svg' %}"
+                                 alt="plus-icon">
+                           </div>
+                        </a>
+                        <div>
+                           <a href="#">
+                              <h1 class="text-[22px] text-[#666] font-semibold">Teddy Bag</h1>
+                           </a>
+                           <span class=" py-[7px] block text-[18px] text-[#666]">Toys</span>
+                           <p class="text-[20px] font-semibold text-[#111]">$100.00</p>
+                        </div>
+                     </div>
+                  </li>
+
+
+                  <li class="list-none w-full h-auto pb-[20px]">
+                     <div class="w-full h-auto flex justify-start align-middle">
+                        <a href="#" class="w-[120px] h-[100px] pr-[20px] rounded relative">
+                           <img class="w-[100px] h-[100px] rounded"
+                              src="{% static 'Assets/Image/Untitled-1-360x432.png' %}" alt="">
+                           <div
+                              class="w-[100px] h-[100px] bg-[#6666669c] flex justify-center  align-middle absolute top-0 rounded opacity-0 hover:opacity-100 item-center">
+                              <img class="w-[40px] h-[40px]" src="{% static 'Assets/Icon/plus-icon.svg' %}"
+                                 alt="plus-icon">
+                           </div>
+                        </a>
+                        <div>
+                           <a href="#">
+                              <h1 class="text-[22px] text-[#666] font-semibold">Teddy Bag</h1>
+                           </a>
+                           <span class=" py-[7px] block text-[18px] text-[#666]">Toys</span>
+                           <p class="text-[20px] font-semibold text-[#111]">$100.00</p>
+                        </div>
+                     </div>
+                  </li>
+
+
+
+               </ul>
+
+
+
+            </div>
+
+         </div>
+         <!-- Best Seller end -->
+
+         <!-- on seler start  -->
+         <div class="w-full h-auto pb-[20px]">
+
+            <div class="w-full h-auto pt-[20px] pb-[30px]">
+               <h1 class="text-[26px] text-[#111] font-semibold">On Seller</h1>
+               <span class="block w-[50px] h-[3px] rounded-xl bg-[#111]"></span>
+            </div>
+
+
+            <div>
+
+               <ul>
+
+                  <li class="list-none w-full h-auto pb-[20px]">
+                     <div class="w-full h-auto flex justify-start align-middle">
+                        <a href="#" class="w-[120px] h-[100px] pr-[20px] rounded relative">
+                           <img class="w-[100px] h-[100px] rounded"
+                              src="{% static 'Assets/Image/Untitled-1-360x432.png' %}" alt="">
+                           <div
+                              class="w-[100px] h-[100px] bg-[#6666669c] flex justify-center  align-middle absolute top-0 rounded opacity-0 hover:opacity-100 item-center">
+                              <img class="w-[40px] h-[40px]" src="{% static 'Assets/Icon/plus-icon.svg' %}"
+                                 alt="plus-icon">
+                           </div>
+                        </a>
+                        <div>
+                           <a href="#">
+                              <h1 class="text-[22px] text-[#666] font-semibold">Teddy Bag</h1>
+                           </a>
+                           <span class=" py-[7px] block text-[18px] text-[#666]">Toys</span>
+                           <p class="text-[20px] font-semibold text-[#111]">$100.00</p>
+                        </div>
+                     </div>
+                  </li>
+
+                  <li class="list-none w-full h-auto pb-[20px]">
+                     <div class="w-full h-auto flex justify-start align-middle">
+                        <a href="#" class="w-[120px] h-[100px] pr-[20px] rounded relative">
+                           <img class="w-[100px] h-[100px] rounded"
+                              src="{% static 'Assets/Image/Untitled-1-360x432.png' %}" alt="">
+                           <div
+                              class="w-[100px] h-[100px] bg-[#6666669c] flex justify-center  align-middle absolute top-0 rounded opacity-0 hover:opacity-100 item-center">
+                              <img class="w-[40px] h-[40px]" src="{% static 'Assets/Icon/plus-icon.svg' %}"
+                                 alt="plus-icon">
+                           </div>
+                        </a>
+                        <div>
+                           <a href="#">
+                              <h1 class="text-[22px] text-[#666] font-semibold">Teddy Bag</h1>
+                           </a>
+                           <span class=" py-[7px] block text-[18px] text-[#666]">Toys</span>
+                           <p class="text-[20px] font-semibold text-[#111]">$100.00</p>
+                        </div>
+                     </div>
+                  </li>
+
+                  <li class="list-none w-full h-auto pb-[20px]">
+                     <div class="w-full h-auto flex justify-start align-middle">
+                        <a href="#" class="w-[120px] h-[100px] pr-[20px] rounded relative">
+                           <img class="w-[100px] h-[100px] rounded"
+                              src="{% static 'Assets/Image/Untitled-1-360x432.png' %}" alt="">
+                           <div
+                              class="w-[100px] h-[100px] bg-[#6666669c] flex justify-center  align-middle absolute top-0 rounded opacity-0 hover:opacity-100 item-center">
+                              <img class="w-[40px] h-[40px]" src="{% static 'Assets/Icon/plus-icon.svg' %}"
+                                 alt="plus-icon">
+                           </div>
+                        </a>
+                        <div>
+                           <a href="#">
+                              <h1 class="text-[22px] text-[#666] font-semibold">Teddy Bag</h1>
+                           </a>
+                           <span class=" py-[7px] block text-[18px] text-[#666]">Toys</span>
+                           <p class="text-[20px] font-semibold text-[#111]">$100.00</p>
+                        </div>
+                     </div>
+                  </li>
+
+                  <li class="list-none w-full h-auto pb-[20px]">
+                     <div class="w-full h-auto flex justify-start align-middle">
+                        <a href="#" class="w-[120px] h-[100px] pr-[20px] rounded relative">
+                           <img class="w-[100px] h-[100px] rounded"
+                              src="{% static 'Assets/Image/Untitled-1-360x432.png' %}" alt="">
+                           <div
+                              class="w-[100px] h-[100px] bg-[#6666669c] flex justify-center  align-middle absolute top-0 rounded opacity-0 hover:opacity-100 item-center">
+                              <img class="w-[40px] h-[40px]" src="{% static 'Assets/Icon/plus-icon.svg' %}"
+                                 alt="plus-icon">
+                           </div>
+                        </a>
+                        <div>
+                           <a href="#">
+                              <h1 class="text-[22px] text-[#666] font-semibold">Teddy Bag</h1>
+                           </a>
+                           <span class=" py-[7px] block text-[18px] text-[#666]">Toys</span>
+                           <p class="text-[20px] font-semibold text-[#111]">$100.00</p>
+                        </div>
+                     </div>
+                  </li>
+
+
+               </ul>
+
+
+
+            </div>
+
+         </div>
+         <!-- on seler end -->
+
+         <!-- top seller start  -->
+         <div class="w-full h-auto pb-[20px]">
+
+            <div class="w-full h-auto pt-[20px] pb-[30px]">
+               <h1 class="text-[26px] text-[#111] font-semibold">Top Seller</h1>
+               <span class="block w-[50px] h-[3px] rounded-xl bg-[#111]"></span>
+            </div>
+
+
+            <div>
+
+               <ul>
+
+                  <li class="list-none w-full h-auto pb-[20px]">
+                     <div class="w-full h-auto flex justify-start align-middle">
+                        <a href="#" class="w-[120px] h-[100px] pr-[20px] rounded relative">
+                           <img class="w-[100px] h-[100px] rounded"
+                              src="{% static 'Assets/Image/Untitled-1-360x432.png' %}" alt="">
+                           <div
+                              class="w-[100px] h-[100px] bg-[#6666669c] flex justify-center  align-middle absolute top-0 rounded opacity-0 hover:opacity-100 item-center">
+                              <img class="w-[40px] h-[40px]" src="{% static 'Assets/Icon/plus-icon.svg' %}"
+                                 alt="plus-icon">
+                           </div>
+                        </a>
+                        <div>
+                           <a href="#">
+                              <h1 class="text-[22px] text-[#666] font-semibold">Teddy Bag</h1>
+                           </a>
+                           <span class=" py-[7px] block text-[18px] text-[#666]">Toys</span>
+                           <p class="text-[20px] font-semibold text-[#111]">$100.00</p>
+                        </div>
+                     </div>
+                  </li>
+
+                  <li class="list-none w-full h-auto pb-[20px]">
+                     <div class="w-full h-auto flex justify-start align-middle">
+                        <a href="#" class="w-[120px] h-[100px] pr-[20px] rounded relative">
+                           <img class="w-[100px] h-[100px] rounded"
+                              src="{% static 'Assets/Image/Untitled-1-360x432.png' %}" alt="">
+                           <div
+                              class="w-[100px] h-[100px] bg-[#6666669c] flex justify-center  align-middle absolute top-0 rounded opacity-0 hover:opacity-100 item-center">
+                              <img class="w-[40px] h-[40px]" src="{% static 'Assets/Icon/plus-icon.svg' %}"
+                                 alt="plus-icon">
+                           </div>
+                        </a>
+                        <div>
+                           <a href="#">
+                              <h1 class="text-[22px] text-[#666] font-semibold">Teddy Bag</h1>
+                           </a>
+                           <span class=" py-[7px] block text-[18px] text-[#666]">Toys</span>
+                           <p class="text-[20px] font-semibold text-[#111]">$100.00</p>
+                        </div>
+                     </div>
+                  </li>
+
+                  <li class="list-none w-full h-auto pb-[20px]">
+                     <div class="w-full h-auto flex justify-start align-middle">
+                        <a href="#" class="w-[120px] h-[100px] pr-[20px] rounded relative">
+                           <img class="w-[100px] h-[100px] rounded"
+                              src="{% static 'Assets/Image/Untitled-1-360x432.png' %}" alt="">
+                           <div
+                              class="w-[100px] h-[100px] bg-[#6666669c] flex justify-center  align-middle absolute top-0 rounded opacity-0 hover:opacity-100 item-center">
+                              <img class="w-[40px] h-[40px]" src="{% static 'Assets/Icon/plus-icon.svg' %}"
+                                 alt="plus-icon">
+                           </div>
+                        </a>
+                        <div>
+                           <a href="#">
+                              <h1 class="text-[22px] text-[#666] font-semibold">Teddy Bag</h1>
+                           </a>
+                           <span class=" py-[7px] block text-[18px] text-[#666]">Toys</span>
+                           <p class="text-[20px] font-semibold text-[#111]">$100.00</p>
+                        </div>
+                     </div>
+                  </li>
+
+                  <li class="list-none w-full h-auto pb-[20px]">
+                     <div class="w-full h-auto flex justify-start align-middle">
+                        <a href="#" class="w-[120px] h-[100px] pr-[20px] rounded relative">
+                           <img class="w-[100px] h-[100px] rounded"
+                              src="{% static 'Assets/Image/Untitled-1-360x432.png' %}" alt="">
+                           <div
+                              class="w-[100px] h-[100px] bg-[#6666669c] flex justify-center  align-middle absolute top-0 rounded opacity-0 hover:opacity-100 item-center">
+                              <img class="w-[40px] h-[40px]" src="{% static 'Assets/Icon/plus-icon.svg' %}"
+                                 alt="plus-icon">
+                           </div>
+                        </a>
+                        <div>
+                           <a href="#">
+                              <h1 class="text-[22px] text-[#666] font-semibold">Teddy Bag</h1>
+                           </a>
+                           <span class=" py-[7px] block text-[18px] text-[#666]">Toys</span>
+                           <p class="text-[20px] font-semibold text-[#111]">$100.00</p>
+                        </div>
+                     </div>
+                  </li>
+
+
+               </ul>
+
+
+
+            </div>
+
+         </div>
+         <!-- top seller end -->
+
+      </div>
+   </div>
+</section>
+<!-- defarente producats end -->
+
+
+<!-- all producat start  -->
+
+<section class="w-full h-auto">
+
+   <div class="max-w-[1340px] h-auto px-[10px] pt-[30px] pb-[40px] m-auto">
+
+      <!-- producat header start  -->
+      <div class="w-full h-auto py-[25px] px-[10px] flex justify-between align-top">
+         <div class="max-w-[300px] h-auto flex flex-col">
+            <h1 class="text-[28px] font-semibold pb-[10px] text-[#111]">
+               Our All Products
+            </h1>
+            <span class="w-[80px] h-[4px] rounded-md inline-block bg-[#111]"></span>
+         </div>
+
+         <a href="#" class="max-w-[80px] h-auto flex justify item-center-between">
+            <span class="text-[#666] cursor-pointer">View All</span>
+            <span class="pl-[5px]">
+               <img class="w-[7px] cursor-pointer" src="{% static 'Assets/Icon/black-right-arrow-icon.svg' %}"
+                  alt="black-right-arrow-icon" />
+            </span>
+         </a>
+      </div>
+      <!-- producat header end  -->
+
+
+
+      <!-- producat section start  -->
+      <div class="w-full h-auto text-center">
+
+
+         {% for producat in all_producat_data %}
+
+         <li class="w-[300px] pr-[10px] inline-block" style="width:300px">
+            <a href='{% url "single_producat" producat.id %}'
+               class="w-full h-auto relative flex flex-col border rounded-md shadow-md hover:shadow-xl">
+               <div class="w-full h-auto">
+                  <div class="w-full h-auto absolute top-0 p-[20px] flex justify-between">
+                     <span
+                        class="w-auto h-auto px-[6px] py-[3px] bg-[#111] inline-block text-white rounded shadow-md">-40%</span>
+                     <div>
+                        <img class="w-[24px] h-[24px]" src="{% static 'Assets/Icon/heart icon.svg' %}"
+                           alt="heart icon" />
+                     </div>
+                  </div>
+
+                  <div class="w-full h-auto">
+                     <img class="w-full h-[330px] rounded-md" src='media/{{producat.produca_image_1}}'
+                        alt="Producat" />
+                  </div>
+               </div>
+               <div class="w-full h-auto p-[10px] text-center">
+                  <p class="text-[18px] text-[#111] text-center  capitalize text-ellipsis overflow-hidden">
+                     {{producat.title}}
+                  </p>
+                  <div class="w-full h-auto  justify-center p-2 align item-center-middle">
+                     <div class="text-[#111] text-[19px]">{{producat.price}}$
+                     </div>
+                     
+                  </div>
+                  <div class="w-full h-auto">
+                     <button
+                        class=" h-auto px-[7px] py-[7px] bg-[#111] text-white text-[16px] rounded-md shadow-md border border-[#111]"
+                        style="width:120px;margin-top:5px;">
+                        Select options
+                     </button>
+                     <button
+                        class=" h-auto px-[7px] py-[7px] text-[#111] bg-white text-[16px] rounded-md shadow-md border border-[#111]"
+                        style="width:120px;">
+                        Add to cart
+                     </button>
+                  </div>
+               </div>
+            </a>
+         </li>
+
+
+         {% endfor %}
+
+
+
+      </div>
+      <!-- producat section end -->
+
+
+
+      <!-- load more section start  -->
+
+      <div class="w-full text-center h-auto py-[15px] ">
+         <button class="p-[10px] px-[18px] bg-[#111] text-[#fff] rounded shadow">Load More</button>
+      </div>
+
+      <!-- load more section end -->
+
+
+   </div>
+
+
+</section>
+
+<!-- all producat end -->
+
+
+
+
+
+<!-- testimonial section start  -->
+
+<section class="w-full h-auto bg-[#bbbbbb42]">
+
+   <div class="max-w-[1340px] p-[20px] py-[50px] m-auto">
+
+      <!-- Inner -->
+      <div class="carousel-inner relative w-full overflow-hidden">
+         <!-- Single item -->
+         <div class="carousel-item active relative float-left w-full text-center ">
+
+            <ol class="new-producat-add cards slider font-normal whitespace-nowrap list-none">
+               <li class="w-[300px] pr-[10px] inline-block">
+                  <img class="w-[115px] h-[100px] mx-[35px] inline-block" src="{% static 'Assets/brand/brand1.png' %}"
+                     alt="">
+               </li>
+               <li class="w-[300px] pr-[10px] inline-block">
+
+                  <img class="w-[115px] h-[100px] mx-[35px] inline-block" src="{% static 'Assets/brand/brand2.png' %}"
+                     alt="">
+               </li>
+               <li class="w-[300px] pr-[10px] inline-block">
+                  <img class="w-[115px] h-[100px] mx-[35px] inline-block" src="{% static 'Assets/brand/brand1.png' %}"
+                     alt="">
+               </li>
+               <li class="w-[300px] pr-[10px] inline-block">
+
+
+                  <img class="w-[115px] h-[100px] mx-[35px] inline-block" src="{% static 'Assets/brand/brand4.png' %}"
+                     alt="">
+               </li>
+               <li class="w-[300px] pr-[10px] inline-block">
+
+                  <img class="w-[115px] h-[100px] mx-[35px] inline-block" src="{% static 'Assets/brand/brand5.png' %}"
+                     alt="">
+               </li>
+               <li class="w-[300px] pr-[10px] inline-block">
+                  <img class="w-[115px] h-[100px] mx-[35px] inline-block" src="{% static 'Assets/brand/brand6.png' %}"
+                     alt="">
+               </li>
+               <li class="w-[300px] pr-[10px] inline-block">
+
+                  <img class="w-[115px] h-[100px] mx-[35px] inline-block" src="{% static 'Assets/brand/brand4.png' %}"
+                     alt="">
+               </li>
+            </ol>
+
+
+
+         </div>
+      </div>
+
+
+   </div>
+
+</section>
+
+{% endblock main %}

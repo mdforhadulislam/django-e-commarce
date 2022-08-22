@@ -1,0 +1,52 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+
+{% block title %}
+Not Found
+{%endblock title %}
+
+
+{% block main %}
+<!-- main content start -->
+
+<main class="w-full h-auto">
+   <!-- loding section start  -->
+
+   <section class="w-full h-full loding-animation-root-section">
+      <div class="loding-animation">
+         <img src="{% static 'Assets/Icon/preloader.gif' %}" alt="loder" />
+      </div>
+   </section>
+
+   <!-- loding section end -->
+
+   <section class="w-full h-auto">
+      <div class="w-full h-auto" style="
+        background-image: url('{% static "Assets/Bannar/404bg.jpg" %}'); background-position: center; background-size:
+         cover; background-repeat: no-repeat; background-attachment: fixed; "
+    >
+      <div class=" max-w-[1340px] h-auto m-auto py-[150px] bg-[#1a1a1ac4]">
+         <div class="w-full h-auto flex flex-col justify-center items-center">
+            <div>
+               <img class="w-[200px] sm:w-[470px]" src="{% static 'Assets/Bannar/404.png' %}" alt="" />
+            </div>
+            <h1 class="py-[10px] text-[35px] md:text-[60px] text-center text-[#fff] font-semibold">
+               OPS! Under Construction
+            </h1>
+            <p class="text-[#fff] text-center text-[20px] py-[10px]">
+               Try going to Home Page by using the button below.
+            </p>
+            <button
+               class="bg-none border-[1px] border-[#fff] hover:bg-[#fff] text-[#fff] hover:text-[#000] px-[25px] py-[12px] rounded outline-none text-center m-auto mt-[15px] text-[18px] font-semibold"style="transition: all 0.2s linear">
+               <a href="#">Go To Home Page</a>
+            </button>
+         </div>
+      </div>
+      </div>
+   </section>
+</main>
+
+<!-- main content end -->
+
+{% endblock main %}

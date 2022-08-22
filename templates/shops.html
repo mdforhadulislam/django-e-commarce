@@ -1,0 +1,167 @@
+{% extends 'layout.html' %}
+
+{% load static %}
+
+
+
+{% block title %}
+Shops
+{% endblock %}
+
+
+{% block main %}
+
+<!-- main content start -->
+<main class="w-full h-auto">
+
+
+   <!-- loding section start  -->
+   <section class="w-full h-full loding-animation-root-section">
+      <div class="loding-animation">
+         <img src="{% static 'Assets/Icon/preloader.gif' %}" alt="loder">
+      </div>
+   </section>
+   <!-- loding section end -->
+
+
+   <!-- producat header start  -->
+   <section class="w-full h-auto">
+      <div class="w-full h-full m-auto flex items-center"
+         style="background-image: url('{% static "Assets/Bannar/banner.jpg" %}');background-position: center;background-size: cover;background-repeat: no-repeat;">
+         <div class="max-w-[1340px] h-[400px] m-auto flex items-center">
+            <div class="w-full h-auto p-[50px]">
+               <div class="w-full h-auto text-center">
+                  <h1 class="text-[35px] text-[#111] font-semibold">Shop</h1>
+               </div>
+               <div class="w-full h-auto text-center text-[18px] p-[5px]">
+                  <span><a href="#" class="hover:text-[#666]">Home</a></span>
+                  <span>></span>
+                  <span class="text-[#111]">Products</span>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-- producat header start  -->
+
+
+
+   <!-- all producat start   -->
+   <section class="w-full h-auto">
+
+      <div class="max-w-[1240px] h-auto p-[20px] m-auto">
+
+         <!-- filter header start  -->
+         <div class="w-full h-auto flex justify-between items-center px-[22px]">
+
+            <div class="w-[100px] text-center sm:w-auto h-auto">
+               <p class="text-[15px] sm:text-[18px]  text-[#111]">Showing 1–9 of 103 results</p>
+            </div>
+
+            <div class="w-auto h-auto flex justify-between items-center">
+
+               <form action="#">
+                  <select name="filter" id="filter" class="border px-[8px] py-[10px] outline-none sm:w-auto w-[70px] ">
+                     <option value="Popularity">Popularity</option>
+                     <option value="Average rating">Average rating</option>
+                     <option value="Latest">Latest</option>
+                     <option value="Price: low to high">Price: low to high</option>
+                     <option value="Price: high to low">Price: high to low</option>
+                  </select>
+               </form>
+
+               <div class="w-full h-auto">
+                  <ul class="w-full h-auto list-none flex justify-between items-center">
+                     <li class="border rounded ml-[12px] py-[4px] px-[6px]">
+                        <a href="#">
+                           <img class="w-[30px] h-[30px]" src="../Assets/Icon/grid-icon.svg" alt="">
+                        </a>
+                     </li>
+                     <li class="border rounded ml-[12px] py-[4px] px-[6px]">
+                        <a href="#">
+                           <img class="w-[30px] h-[30px]" src="../Assets/Icon/list-icon.svg" alt="">
+                        </a>
+                     </li>
+                  </ul>
+               </div>
+
+            </div>
+
+         </div>
+         <!-- filter header start  -->
+
+         <div class="w-full text-center py-[30px]">
+
+
+
+            
+         {% for producat in all_producat_data %}
+         
+         <div class="w-[300px] pr-[10px] inline-block" style="width:300px">
+            <a href='{% url "single_producat" producat.id %}'
+               class="w-full h-auto relative flex flex-col border rounded-md shadow-md hover:shadow-xl">
+               <div class="w-full h-auto">
+                  <div class="w-full h-auto absolute top-0 p-[20px] flex justify-between">
+                     <span
+                        class="w-auto h-auto px-[6px] py-[3px] bg-[#111] inline-block text-white rounded shadow-md">-40%</span>
+                     <div>
+                        <img class="w-[24px] h-[24px]" src="{% static 'Assets/Icon/heart icon.svg' %}"
+                           alt="heart icon" />
+                     </div>
+                  </div>
+
+                  <div class="w-full h-auto">
+                     <img class="w-full h-[330px] rounded-md" src='media/{{producat.produca_image_1}}'
+                        alt="Producat" />
+                  </div>
+               </div>
+               <div class="w-full h-auto p-[10px] text-center">
+                  <p class="text-[18px] text-[#111] text-center  capitalize text-ellipsis overflow-hidden">
+                     {{producat.title}}
+                  </p>
+                  <div class="w-full h-auto  justify-center p-2 align item-center-middle">
+                     <div class="text-[#111] text-[19px]">{{producat.price}}$
+                     </div>
+                     
+                  </div>
+                  <div class="w-full h-auto">
+                     <button
+                        class=" h-auto px-[7px] py-[7px] bg-[#111] text-white text-[16px] rounded-md shadow-md border border-[#111]"
+                        style="width:120px;margin-top:5px;">
+                        Select options
+                     </button>
+                     <button
+                        class=" h-auto px-[7px] py-[7px] text-[#111] bg-white text-[16px] rounded-md shadow-md border border-[#111]"
+                        style="width:120px;">
+                        Add to cart
+                     </button>
+                  </div>
+               </div>
+            </a>
+         </div>
+
+
+         {% endfor %}
+
+
+            <!-- load more section start  -->
+
+            <div class="w-full text-center h-auto py-[15px] ">
+               <button class="p-[10px] px-[18px] bg-[#111] text-[#fff] rounded shadow">Load More</button>
+            </div>
+
+            <!-- load more section end -->
+
+         </div>
+
+      </div>
+
+   </section>
+   <!-- all producat start   -->
+
+
+
+</main>
+<!-- main content end -->
+
+{% endblock %}
