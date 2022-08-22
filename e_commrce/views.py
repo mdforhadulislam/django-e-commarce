@@ -1,6 +1,6 @@
-from app.models import ProducatStatus,Producat
-from django.shortcuts import render
+from app.models import Producat, ProducatStatus
 from django.conf import settings
+from django.shortcuts import render
 
 
 def home(request):
@@ -21,8 +21,11 @@ def about(request):
 
 def shop(request):
    all_Producat_data = Producat.objects.all()
+   print(all_Producat_data)
    data={
-      "all_Producat_data":all_Producat_data
+      "all_Producat_data":all_Producat_data,
+      "MEDIA_URL":settings.MEDIA_URL,
+      "MEDIA_ROOT":settings.MEDIA_ROOT
    }
    return render(request,'shops.html',data)
 

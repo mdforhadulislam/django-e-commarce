@@ -95,7 +95,7 @@ Shops
 
 
             
-         {% for producat in all_producat_data %}
+         {% for producat in all_Producat_data %}
          
          <div class="w-[300px] pr-[10px] inline-block" style="width:300px">
             <a href='{% url "single_producat" producat.id %}'
@@ -111,7 +111,7 @@ Shops
                   </div>
 
                   <div class="w-full h-auto">
-                     <img class="w-full h-[330px] rounded-md" src='media/{{producat.produca_image_1}}'
+                     <img class="w-full h-[330px] rounded-md" src='{{MEDIA_URL}}{{producat.produca_image_1}}'
                         alt="Producat" />
                   </div>
                </div>
