@@ -1,7 +1,6 @@
 from app.models import Producat, ProducatStatus
-from django.conf import settings
+from django.conf import settings 
 from django.shortcuts import render
-
 
 def home(request):
    Producat_all_data = Producat.objects.all()
@@ -43,3 +42,14 @@ def single_producat(request,producat_id):
      "MEDIA_ROOT":settings.MEDIA_ROOT
    }
    return render(request,'single-producat.html',data)
+
+
+
+def login(request):
+   return render(request, 'login.html')
+
+   # return render(request,'login.html')
+
+def signup(request):
+   return render(request,'sign-up.html')
+

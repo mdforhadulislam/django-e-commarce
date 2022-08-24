@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start":"npx tailwindcss -i ./static/css/input.css -o ./static/css/style.css --watch"
+    "start": "npx tailwindcss -i ./static/css/input.css -o ./static/css/style.css --watch"
   },
   "keywords": [
     "ecommarce"
@@ -14,5 +14,8 @@
   "license": "ISC",
   "devDependencies": {
     "tailwindcss": "^3.1.8"
+  },
+  "dependencies": {
+    "flowbite": "^1.5.2"
   }
 }

@@ -18,7 +18,7 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path
 
-from .views import about, home, shop,contact,single_producat
+from .views import about, contact, home, login, shop, signup, single_producat
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -26,7 +26,9 @@ urlpatterns = [
     path('aboutus/',about,name="aboutus"),
     path('shops/',shop,name="shops"),
     path('contact/',contact,name="contact"),
-    path('producat/<int:producat_id>/' ,single_producat, name= "single_producat")
+    path('producat/<int:producat_id>/' ,single_producat, name= "single_producat"),
+    path('login/',login,name="login"),
+    path("sing-up/",signup,name="signup"),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

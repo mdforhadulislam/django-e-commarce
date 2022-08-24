@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,8 +14,8 @@
       rel="stylesheet" />
 
    <title>Login</title>
-   <link rel="stylesheet" href="../dist/style.css" />
-   <link rel="stylesheet" href="../dist/main.css" />
+   <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+   <link rel="stylesheet" href="{% static 'css/main.css' %}" />
 </head>
 
 <body class="bg-[#11111167]">
@@ -64,29 +65,34 @@
                <div class="flex flex-row justify-center items-center space-x-3">
                   <a href="https://www.behance.net/ajeeshmon" target="_blank"
                      class="w-11 h-11 items-center justify-center inline-flex rounded-2xl font-bold text-lg   bg-blue-900 hover:shadow-lg cursor-pointer transition ease-in duration-300">
-                     <img class="w-4 h-4" src='../Assets/Icon/Facebook white.svg' /></a>
+                     <img class="w-4 h-4" src="{% static 'Assets/Icon/Facebook white.svg' %}" /></a>
                   <a href="https://twitter.com/ajeemon?lang=en" target="_blank"
                      class="w-11 h-11 items-center justify-center inline-flex rounded-2xl font-bold text-lg  text-white bg-blue-400 hover:shadow-lg cursor-pointer transition ease-in duration-300"><img
-                        class="w-4 h-4" src="../Assets/Icon/Twitch white.svg" /></a>
+                        class="w-4 h-4" src="{% static 'Assets/Icon/Twitch white.svg' %}" /></a>
                   <a href="https://in.linkedin.com/in/ajeeshmon" target="_blank"
                      class="w-11 h-11 items-center justify-center inline-flex rounded-2xl font-bold text-lg  text-white bg-blue-500 hover:shadow-lg cursor-pointer transition ease-in duration-300"><img
-                        src="../Assets/Icon/Linkedin white.svg" class="w-4 h-4" /></a>
+                        src="{% static 'Assets/Icon/Linkedin white.svg' %}" class="w-4 h-4" /></a>
                </div>
                <div class="flex items-center justify-center space-x-2">
                   <span class="h-px w-16 bg-gray-200"></span>
                   <span class="text-gray-300 font-normal">or continue with</span>
                   <span class="h-px w-16 bg-gray-200"></span>
                </div>
-               <form class="mt-8 space-y-6" action="#" method="POST">
+               <form class="mt-8 space-y-6" action="/" method="POST">
+                  {% csrf_token %}
                   <input type="hidden" name="remember" value="true">
                   <div class="relative">
                      <div class="absolute right-3 mt-4">
-                        <svg xmlns="http://www.w3.org/2000/svg"
-                           class="h-6 w-6 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-500" fill="none"
+                           viewBox="0 0 24 24" stroke="currentColor">
                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                               d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                         </svg>
                      </div>
+
+                     <p>{{ message }}</p>
+                     {{ form.as_p }}
+
                      <label class="ml-3 text-sm font-bold text-gray-700 tracking-wide">Email</label>
                      <input
                         class=" w-full text-base px-4 py-2 border-b border-gray-300 focus:outline-none rounded-2xl focus:border-indigo-500"
