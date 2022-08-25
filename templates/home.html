@@ -6,6 +6,15 @@ Home
 {% endblock title %}
 
 
+{% block extraScript %}
+
+<link rel="stylesheet" href="{% static 'css/flowbite.min.css' %}" />
+<script src="{% static 'Js/flowbite.js' %}"></script>
+   
+{% endblock extraScript %}
+   
+
+
 {% block main %}
 
 
@@ -304,7 +313,7 @@ Home
                   class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
                   data-carousel-prev="">
                   <span
-                     class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-black dark:bg-gray-800/30 group-hover:bg-black dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                     class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-black dark:bg-gray-800/30 hover:shadow-4xl">
                      <svg aria-hidden="true" class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none"
                         stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7">
@@ -317,7 +326,7 @@ Home
                   class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
                   data-carousel-next="">
                   <span
-                     class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-black dark:bg-gray-800/30 group-hover:bg-black dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                     class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-black dark:bg-gray-800/30 hover:shadow-4xl">
                      <svg aria-hidden="true" class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none"
                         stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
@@ -401,15 +410,19 @@ Home
 <section class="w-full h-auto">
    <div
       class="max-w-[1340px] h-auto m-auto pt-[10px] pb-[30px] px-[20px] xl:flex justify-between align-middle item-center">
-      <div class="w-full h-full xl:pr-[10px] py-[20px]">
+      <div class="w-full h-full xl:pr-[10px] xl:pb-[0px] pb-5">
          <div
             class="collection-card1 w-full xl:w-[580px] h-full relative pt-[20px] md:pt-[40px] xl:pt-[20px] shadow cursor-pointer">
-            <div class="w-full h-auto flex justify-end align-middle ml-[-3%]">
+            <div class="w-full h-auto flex justify-end align-middle ml-[-3%]"style="height: 100%;
+            display: flex;
+            justify-items: center;
+            align-items: stretch;
+            justify-content: flex-end;">
                <div
                   class="xl:w-[350px] xl:h-[416px] sm:w-[250px] sm:h-[260px] md:w-[350px] md:h-[400px] w-[180px] h-[200px] flex justify-center overflow-hidden"
-                  style="align-items: end">
+                  style="height: 100%;padding-top: 60px;align-items: flex-end;">
                   <img
-                     class="xl:w-[300px] w-[160px] h-[200px] xl:h-auto sm:w-[250px] sm:h-[260px] md:w-[340px] md:h-[400px]"
+                     class="xl:w-[300px] w-[160px] h-[200px] xl:h-auto sm:w-[250px] sm:h-[260px] md:w-[340px] md:h-[430px]"
                      src="{% static 'Assets/Image/product11.png' %}" alt="product" />
                </div>
             </div>
@@ -553,14 +566,6 @@ Home
 
 
             </ol>
-            <!-- <div
-               class="js-slider-arrow flex justify-center align-middle absolute top-1/2 left-1 z-10 rounded-md p-[20px] bg-[#fff] border-2 cursor-pointer shadow-lg left slider-arrow item-center">
-            </div>
-
-            <div
-               class="js-slider-arrow flex justify-center align-middle absolute top-1/2 right-1 z-10 rounded-md p-[20px] bg-[#fff] border-2 cursor-pointer shadow-lg right slider-arrow item-center">
-
-            </div> -->
          </div>
       </div>
    </div>
@@ -613,30 +618,26 @@ Home
                         </div>
                      </div>
                      <div class="w-full h-auto p-[10px] text-center">
-                        <div class="text-[18px] text-[#111] text-center">
+                        <p class="text-[18px] text-[#111] text-center  capitalize text-ellipsis overflow-hidden">
                            {{popular_producat.title}}
-                        </div>
-                        <div class="w-full h-auto flex justify-center p-3 align item-center-middle">
-                           <div class="text-[#111] text-[19px]">{{popular_producat.price}}</div>
-                           <div class="w-full h-auto" style="display: flex;
-                           flex-direction: row;
-                           flex-wrap: wrap-reverse;
-                           justify-content: end;
-                           align-items: center;
-                           align-content: center;">
-                              <button
-                                 class=" block h-auto px-[7px] py-[7px] bg-[#111] text-white text-[16px] rounded-md shadow-md border border-[#111]"
-                                 style="width:120px;margin-top:5px;">
-                                 Select options
-                              </button>
-                              <button
-                                 class=" block h-auto px-[7px] py-[7px] text-[#111] bg-white text-[16px] rounded-md shadow-md border border-[#111]"
-                                 style="width:120px;">
-                                 Add to cart
-                              </button>
+                        </p>
+                        <div class="w-full h-auto  justify-center p-2 align item-center-middle">
+                           <div class="text-[#111] text-[19px]">{{popular_producat.price}}$
                            </div>
-                        </div>
 
+                        </div>
+                        <div class="w-full h-auto">
+                           <button
+                              class=" h-auto px-[7px] py-[7px] bg-[#111] text-white text-[16px] rounded-md shadow-md border border-[#111]"
+                              style="width:120px;margin-top:5px;">
+                              Select options
+                           </button>
+                           <button
+                              class=" h-auto px-[7px] py-[7px] text-[#111] bg-white text-[16px] rounded-md shadow-md border border-[#111]"
+                              style="width:120px;">
+                              Add to cart
+                           </button>
+                        </div>
                      </div>
                   </a>
                </li>
@@ -644,14 +645,6 @@ Home
 
 
             </ol>
-            <!-- <div
-               class="js-slider-arrow flex justify-center align-middle absolute top-1/2 left-1 z-10 rounded-md p-[20px] bg-[#fff] border-2 cursor-pointer shadow-lg left slider-arrow item-center">
-            </div>
-
-            <div
-               class="js-slider-arrow flex justify-center align-middle absolute top-1/2 right-1 z-10 rounded-md p-[20px] bg-[#fff] border-2 cursor-pointer shadow-lg right slider-arrow item-center">
-
-            </div> -->
          </div>
       </div>
    </div>
@@ -660,8 +653,7 @@ Home
 
 
 <!-- offer section start  -->
-<section class="w-ful h-auto my-[50px]" style="background-image: url('{% static " Assets/Bannar/banner2.png"
-   %}');background-position: center;background-size: cover; background-repeat: no-repeat;background-attachment: fixed;">
+<section class="w-ful h-auto my-[50px]" style="background-image: url('{% static "Assets/Bannar/banner2.png" %}');background-position: center;background-size: cover; background-repeat: no-repeat;background-attachment: fixed;">
    <div class="max-w-[1340px] h-auto px-[20px] lg:pl-[40px] m-auto">
       <div class="w-full h-auto flex justify-between align-middle items-center">
 

@@ -20,7 +20,6 @@ def about(request):
 
 def shop(request):
    all_Producat_data = Producat.objects.all()
-   print(all_Producat_data)
    data={
       "all_Producat_data":all_Producat_data,
       "MEDIA_URL":settings.MEDIA_URL,
@@ -34,6 +33,7 @@ def contact(request):
 
 def single_producat(request,producat_id):
    Producat_data = Producat.objects.get(id=producat_id)
+   print(Producat_data.producat_size)
    all_Producat_data = Producat.objects.all()
    data = {
      "Producat_data":Producat_data,
@@ -48,7 +48,6 @@ def single_producat(request,producat_id):
 def login(request):
    return render(request, 'login.html')
 
-   # return render(request,'login.html')
 
 def signup(request):
    return render(request,'sign-up.html')

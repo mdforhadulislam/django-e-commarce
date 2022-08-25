@@ -1,5 +1,6 @@
 from django.contrib.auth.models import User
 from django.db import models
+from colorfield.fields import ColorField
 
 # Create your models here.
 DEFAULT = 'default.jpg'
@@ -21,7 +22,19 @@ class ProducatStatus(models.Model):
    id = range(1,1000000)
    def __str__(self):
       return self.title
-      
+   
+class ProducatSize(models.Model):
+   title = models.CharField(max_length=50,null=True)
+   id = range(1,1000000)
+   def __str__(self):
+      return self.title
+
+class ProducatCollor(models.Model):
+   color =  ColorField(default='#FF0000')
+   id = range(1,1000000)
+   def __str__(self):
+      return self.color
+
 
 class Producat(models.Model):
    title = models.CharField(max_length=50,null=True)
@@ -36,7 +49,8 @@ class Producat(models.Model):
    produca_image_5 = models.ImageField(upload_to='producats',default=DEFAULT)
    is_stock = models.BooleanField(default=True)
    is_discount = models.IntegerField(default=00)
-   # collor =  models.ForeignKey(ProducatCollor,on_delete=models.CASCADE)
+   producat_size =  models.ManyToManyField(ProducatSize)
+   producat_color =  models.ManyToManyField(ProducatCollor)
 
    def __str__(self):
       return self.title
